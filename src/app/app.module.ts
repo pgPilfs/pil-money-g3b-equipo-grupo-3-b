@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ActionsComponent } from './actions/actions.component';
 import { RouterModule } from '@angular/router';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
     RegisterComponent,
     LoginComponent,
     ActionsComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       { path: 'actions', component: ActionsComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'account', component: AccountComponent },
       { path: '', component: LoginComponent },
     ]),
   ],
