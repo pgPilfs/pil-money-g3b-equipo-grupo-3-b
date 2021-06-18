@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { ActionsComponent } from './actions/actions.component';
 import { RouterModule } from '@angular/router';
 import { AccountComponent } from './account/account.component';
+import { ContactComponent } from './contact/contact.component';
+import { FaqComponent } from './faq/faq.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { AccountComponent } from './account/account.component';
     LoginComponent,
     ActionsComponent,
     AccountComponent,
+    ContactComponent,
+    FaqComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +32,8 @@ import { AccountComponent } from './account/account.component';
       { path: 'actions', component: ActionsComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'faq', component: FaqComponent },
       { path: '', component: LoginComponent },
     ]),
   ],
