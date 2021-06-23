@@ -12,6 +12,7 @@ import { AccountComponent } from './account/account.component';
 import { ContactComponent } from './contact/contact.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     FaqComponent,
     FooterComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { FooterComponent } from './footer/footer.component';
       { path: 'account', component: AccountComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'faq', component: FaqComponent },
-      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: '', component: LandingComponent },
     ]),
   ],
   providers: [],
