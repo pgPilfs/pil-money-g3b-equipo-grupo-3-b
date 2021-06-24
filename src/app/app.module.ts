@@ -37,6 +37,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'services', component: ServiciosComponent },
       { path: 'faq', component: FaqComponent },
       { path: 'login', component: LoginComponent },
       { path: '', component: LandingComponent },
