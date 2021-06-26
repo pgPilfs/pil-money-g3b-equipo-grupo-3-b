@@ -14,6 +14,10 @@ import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { OperationsComponent } from './operations/operations.component';
+import { ExchangeComponent } from './operations/exchange/exchange.component';
+import { ActionComponent } from './operations/action/action.component';
+import { TransferComponent } from './operations/transfer/transfer.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,10 @@ import { ServiciosComponent } from './servicios/servicios.component';
     FooterComponent,
     LandingComponent,
     ServiciosComponent,
+    OperationsComponent,
+    ExchangeComponent,
+    ActionComponent,
+    TransferComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +42,12 @@ import { ServiciosComponent } from './servicios/servicios.component';
     NoopAnimationsModule,
     RouterModule.forRoot([
       { path: 'actions', component: ActionsComponent },
+      { path: 'operations', component: OperationsComponent,
+          children: [
+            {path: 'transfer', component: TransferComponent},
+            {path: 'exchange', component: ExchangeComponent},
+            {path: 'action', component: ActionComponent}            
+          ]},
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'contact', component: ContactComponent },
