@@ -18,6 +18,7 @@ import { OperationsComponent } from './operations/operations.component';
 import { ExchangeComponent } from './operations/exchange/exchange.component';
 import { ActionComponent } from './operations/action/action.component';
 import { TransferComponent } from './operations/transfer/transfer.component';
+import { RetirosComponent } from './retiros/retiros.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TransferComponent } from './operations/transfer/transfer.component';
     ExchangeComponent,
     ActionComponent,
     TransferComponent,
+    RetirosComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +57,8 @@ import { TransferComponent } from './operations/transfer/transfer.component';
       { path: 'faq', component: FaqComponent },
       { path: 'login', component: LoginComponent },
       { path: '', component: LandingComponent },
+      { path: 'retiros', component: RetirosComponent },
+
     ]),
   ],
   providers: [],
