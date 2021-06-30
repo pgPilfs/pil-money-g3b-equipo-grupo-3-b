@@ -53,6 +53,7 @@ import { RetirosComponent } from './retiros/retiros.component';
           { path: 'action', component: ActionComponent },
         ],
       },
+      { path: 'retiros', component: RetirosComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'register', component: RegisterComponent },
