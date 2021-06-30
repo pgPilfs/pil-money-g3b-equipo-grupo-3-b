@@ -1,38 +1,44 @@
 <div class="global-container">
   <div class="card login-form">
     <div class="card-body">
-      <h3 class="card-title text-center">Iniciar sesión a PIL Money</h3>
-      <div class="card-text">
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Correo electronico</label>
-            <input
-              type="email"
-              class="form-control form-control-sm"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
+      <h3 class="card-title text-left">
+        <span class='d-block'>¡Hola! Para seguir, ingresá</span>
+        <span>tu e‑mail o usuario.</span>
+      </h3>
+      <form action='post'>
+        <div class="form-group user">
+          <label class='mb-1' for="user-email">Usuario o email</label>
+          <input
+            placeholder="Ingrese su usuario o email"
+            type="email"
+            class="form-control form-control-sm"
+            id="user-email"
+          />
+        </div>
+        <div class="form-group">
+          <label class='mb-1' for="user-password">Contraseña</label>
+          <input
+            placeholder="Ingrese su contraseña"
+            type="password"
+            class="form-control form-control-sm"
+            id="user-password"
+          />
+        </div>
+        <div class='forgot-password align-items-center'>
+          <div class="form-group d-flex align-items-center ">
+            <input type="checkbox" id="remember-me"/>
+            <label for="remember-me">Recordar usuario</label>
           </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <a href="#" style="float: right; font-size: 12px"
-              >¿Olvidó su contraseña?</a
-            >
-            <input
-              type="password"
-              class="form-control form-control-sm"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">
-            Iniciar sesión
-          </button>
-
-          <div class="sign-up">
-            ¿No tiene una cuenta? <a href="#">Registrese</a>
-          </div>
-        </form>
-      </div>
+          <a href="#">¿Olvidó su contraseña?</a>
+        </div>
+        <button type="submit" class="btn btn-block">
+          Ingresar
+        </button>
+        <div class="sign-up">
+          <span id='create-account'>¿No tiene cuenta?</span> 
+          <a aria-labelledby='create-account' href="#">Crear cuenta</a>
+        </div>
+      </form>
     </div>
   </div>
 </div>

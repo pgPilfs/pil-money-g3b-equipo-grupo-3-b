@@ -30,6 +30,10 @@
   padding-left: 5%;
 }
 
+nav {
+  height: 58px;
+}
+
 nav a {
   color: black;
 }
