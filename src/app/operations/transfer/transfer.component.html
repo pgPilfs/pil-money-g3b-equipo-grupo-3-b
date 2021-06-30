@@ -1,0 +1,39 @@
+<div class="container-fluid col-8">
+    <form class="card">
+        <div class="card-header">Transferir a otras cuentas en dólares</div>
+        <div class="card-body">
+            <div class="mb-3 col-8">
+                <label for="cuenta" class="form-label">Cuenta destino</label>
+                <div class="input-group" id="cuenta">
+                    <span class="input-group-text" id="cuenta">CBU / CVU</span>
+                    <input type="text" pattern="\d*" maxlength="22" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 col-4">
+               <label for="importe" class="form-label">Importe a transferir</label>
+               <div class="input-group">
+                    <span class="input-group-text" id="importe">USD</span>
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3 col-4">
+                <label for="concept" class="form-label">Concepto</label>
+                <select class="form-select">
+                        <option value="1">Alquileres</option>
+                        <option value="2">Couta</option>
+                        <option value="3">Expensas</option>
+                        <option value="4">Factura</option>
+                        <option value="5">Prestamo</option>
+                        <option value="6">Seguro</option>
+                        <option value="7" selected>Varios</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="ref" class="form-label">Referencia/Descripción</label>
+                <textarea class="form-control" id="ref" style="height: 100px"></textarea>
+            </div>
+                <button type="submit" class="btn btn-primary">Transferir</button>
+        </div>
+    </form>
+</div>
+
