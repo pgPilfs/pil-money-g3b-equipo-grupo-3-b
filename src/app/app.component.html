@@ -1,6 +1,58 @@
-<h1>PIL - Money</h1>
-<p>Proyecto PIL</p>
-<hr>
-<h2>Billetera Digital</h2>
-<p>Sistema web para la creación de una billetera digital</p>
-<hr>
+<nav class="navbar navbar-expand-lg">
+  <a class="name navbar-brand" routerLink="/" routerLinkActive="active">
+    Waled
+  </a>
+  <button
+    class="navbar-toggler"
+    style="background-color: rgb(122, 122, 122)"
+    type="button"
+    (click)="toggleNavbar()"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div
+    class="ml-1 collapse navbar-collapse mr-auto"
+    [ngClass]="{ show: navbarOpen }"
+  >
+    <ul class="navbar-nav mr-auto">
+      <a
+        class="btn btn-light nav-link"
+        routerLink="/account"
+        routerLinkActive="active"
+        >Mis Movimientos</a
+      >
+      <a
+        class="nav-item active btn btn-light nav-link"
+        routerLink="/actions"
+        routerLinkActive="active"
+        >Depositar</a
+      >
+      <a
+        class="btn btn-light nav-link"
+        routerLink="/contact"
+        routerLinkActive="active"
+        >Contacto</a
+      >
+      <a
+        class="btn btn-light nav-link"
+        routerLink="/faq"
+        routerLinkActive="active"
+        >Preguntas Frecuentes</a
+      >
+      <a
+        class="btn btn-light nav-link"
+        routerLink="/login"
+        routerLinkActive="active"
+        >Iniciar Sesión</a
+      >
+      <a
+        style="color: white"
+        class="btn btn-primary nav-link"
+        routerLink="/register"
+        routerLinkActive="active"
+        >Crea tu cuenta</a
+      >
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>

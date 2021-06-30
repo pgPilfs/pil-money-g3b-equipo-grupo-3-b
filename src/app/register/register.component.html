@@ -1,0 +1,84 @@
+<section>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+        <div class="row">
+          <div class="col text-center">
+            <h1>Registrarse</h1>
+            <p class="text-h3">Transferir dinero nunca fue más facil!</p>
+          </div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col mt-4">
+            <input type="text" class="form-control" placeholder="Nombre" />
+          </div>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Correo electrónico"
+            />
+          </div>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col">
+            <input
+              type="tel"
+              class="form-control"
+              required="required"
+              placeholder="Numero de teléfono"
+            />
+          </div>
+        </div>
+
+        <div>
+          <br />
+          <p>Necesitamos una foto de tu DNI</p>
+          <label class="image-upload-container btn btn-bwm">
+            <span>Subir una imagen </span>
+
+            <input
+              #imageInput
+              type="file"
+              accept="image/*"
+              (change)="processFile(imageInput)"
+            />
+          </label>
+        </div>
+        <div class="row align-items-center mt-4">
+          <div class="col">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Contraseña"
+            />
+          </div>
+          <div class="col">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Confirmar contraseña"
+            />
+          </div>
+        </div>
+        <div class="row justify-content-start mt-4">
+          <div class="col">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" />
+                He leido y acepto los
+                <a href=""> terminos y condiciones</a>
+              </label>
+            </div>
+
+            <button style="margin-bottom: 15px" class="btn btn-primary mt-4">
+              Registrarse
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
