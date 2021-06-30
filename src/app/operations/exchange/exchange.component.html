@@ -1,0 +1,50 @@
+<div class="container-fluid col-8">
+    <form class="card">
+        <div class="card-header">Compra y venta de moneja extranjera</div>
+        <div class="card-body">
+               
+            <div class="mb-3 col-6">
+                <label for="debit" class="form-label">Cuenta débito</label>
+                <select class="form-select" id="debit">
+                    <option selected>CA $ Nº1234567-0 123-0</option>
+                </select>
+            </div>
+            
+            <div class="mb-3 col-6">
+                <label for="credit" class="form-label">Cuenta crédito</label>
+                <select class="form-select" id="credit">
+                    <option selected>CA U$D Nº1234567-0 123-1</option>
+                </select>
+            </div> 
+            <div class="row">
+                <label for="input_usd" class="form-label">Importes</label>
+                <div class="col-5">
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="input_usd" placeholder="USD" value="0.00">
+                        <label for="input_usd">USD</label>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-light">
+                        <span style="font-size: 30px; font-weight: bold;">⟷</span>
+                    </button>
+                </div>
+                <div class="col-5">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" readonly id="text_arg" placeholder="ARG" value="0.00">
+                        <label for="text_arg">ARG</label>
+                        <div class="form-text text-end">Saldo disponible:<span class="badge bg-light text-dark" style="font-size: 14px;">$ 10.000,00</span></div>
+                    </div>
+                </div>
+                <p class="fw-normal m-0">Cotización actual: 1 U$D = 100 AR$</p>
+                <p class="fw-light">Incluye el costo de comisión del 5% para compra y venta de dólares</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Comprar</button>
+            
+            </div> 
+          
+           
+    </form>
+
+</div>
+

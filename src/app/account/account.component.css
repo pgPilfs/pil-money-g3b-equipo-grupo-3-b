@@ -1,4 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+body {
+  background-color: rgb(245, 245, 245);
+  height: 150vh;
+}
+
+.large {
+  grid-row-end: span 2;
+}
+
+.container {
+  padding-top: 3%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-row: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.container .box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
 
 .account {
   display: flex;
@@ -9,22 +33,6 @@
 .profile {
   display: flex;
   align-items: center;
-  height: 60px;
-  margin: 20px 0;
-}
-
-.profile_picture {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 40%;
-  margin: 0;
-}
-
-.profile_picture img {
-  width: 50%;
 }
 
 .profile_name {
@@ -33,89 +41,12 @@
   font-size: 15px;
 }
 
-.balance {
-  margin: 20px 0;
-}
-
 .balance_text {
   font-size: 15px;
   color: #979797;
-  margin-bottom: 10px;
 }
 
 .amount {
   font-weight: 600;
   font-size: 36px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 0;
-  border-radius: 20px;
-  padding: 25px 30px;
-}
-
-.card_information {
-  display: flex;
-  margin-bottom: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav_tab {
-  font-size: 16px;
-  font-weight: 600;
-  color: #979797;
-  width: 150px;
-  cursor: pointer;
-}
-
-.content {
-  margin-top: 15px;
-  user-select: none;
-  pointer-events: none;
-  opacity: 0;
-  height: 0;
-}
-
-.content:first-child {
-  opacity: 1;
-  height: auto;
-}
-
-.today {
-  display: flex;
-  justify-content: space-between;
-  color: #d5d5d5;
-}
-
-.transaction {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
-}
-
-.transaction__who {
-  display: flex;
-  align-items: center;
-}
-
-.transaction_who figure {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 40%;
-  margin-right: 20px;
-}
-
-.transaction_who img {
-  width: 40%;
 }
