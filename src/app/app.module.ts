@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { AccountComponent } from "./account/account.component"
+import { AccountComponent } from './account/account.component';
 import { BalanceComponent } from './balance/balance.component';
 import { MovementsComponent } from './movements/movements.component';
 import { RouterModule } from '@angular/router';
@@ -14,6 +14,11 @@ import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingComponent } from './landing/landing.component';
 import { ServiciosComponent } from './servicios/servicios.component';
+import { OperationsComponent } from './operations/operations.component';
+import { ExchangeComponent } from './operations/exchange/exchange.component';
+import { ActionComponent } from './operations/action/action.component';
+import { TransferComponent } from './operations/transfer/transfer.component';
+import { RetirosComponent } from './retiros/retiros.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +33,27 @@ import { ServiciosComponent } from './servicios/servicios.component';
     FooterComponent,
     LandingComponent,
     ServiciosComponent,
+    OperationsComponent,
+    ExchangeComponent,
+    ActionComponent,
+    TransferComponent,
+    RetirosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     RouterModule.forRoot([
+      {
+        path: 'operations',
+        component: OperationsComponent,
+        children: [
+          { path: 'transfer', component: TransferComponent },
+          { path: 'exchange', component: ExchangeComponent },
+          { path: 'action', component: ActionComponent },
+        ],
+      },
+      { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'register', component: RegisterComponent },
       { path: 'contact', component: ContactComponent },
@@ -41,6 +61,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
       { path: 'faq', component: FaqComponent },
       { path: 'login', component: LoginComponent },
       { path: '', component: LandingComponent },
+      { path: 'retiros', component: RetirosComponent },
     ]),
   ],
   providers: [],
