@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ActionsComponent } from './actions/actions.component';
+import { AccountComponent } from "./account/account.component"
+import { BalanceComponent } from './balance/balance.component';
+import { MovementsComponent } from './movements/movements.component';
 import { RouterModule } from '@angular/router';
-import { AccountComponent } from './account/account.component';
 import { ContactComponent } from './contact/contact.component';
 import { FaqComponent } from './faq/faq.component';
 import { FooterComponent } from './footer/footer.component';
@@ -20,8 +20,9 @@ import { ServiciosComponent } from './servicios/servicios.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ActionsComponent,
     AccountComponent,
+    BalanceComponent,
+    MovementsComponent,
     ContactComponent,
     FaqComponent,
     FooterComponent,
@@ -33,9 +34,8 @@ import { ServiciosComponent } from './servicios/servicios.component';
     AppRoutingModule,
     NoopAnimationsModule,
     RouterModule.forRoot([
-      { path: 'actions', component: ActionsComponent },
-      { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
+      { path: 'register', component: RegisterComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'services', component: ServiciosComponent },
       { path: 'faq', component: FaqComponent },
