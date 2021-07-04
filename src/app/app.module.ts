@@ -19,6 +19,7 @@ import { ExchangeComponent } from './operations/exchange/exchange.component';
 import { ActionComponent } from './operations/action/action.component';
 import { TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { RetirosComponent } from './retiros/retiros.component';
   ],
   imports: [
     BrowserModule,
+    MatStepperModule,
     AppRoutingModule,
     NoopAnimationsModule,
     RouterModule.forRoot([
