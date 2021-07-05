@@ -20,6 +20,7 @@ import { ActionComponent } from './operations/action/action.component';
 import { TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MatStepperModule } from '@angular/material/stepper';
   imports: [
     BrowserModule,
     MatStepperModule,
+    MatIconModule,
     AppRoutingModule,
     NoopAnimationsModule,
     RouterModule.forRoot([

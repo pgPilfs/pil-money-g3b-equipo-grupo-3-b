@@ -60,7 +60,6 @@ p {
 
 form {
   padding-top: 10px;
-  margin-top: 30px;
 }
 
 form button {
@@ -69,11 +68,28 @@ form button {
 }
 
 button {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
   background: #c4c4c4;
   border-radius: 100px;
+  font-size: 18px;
+  font-weight: 500;
+  width: 300px;
+  height: 60px;
+}
+
+.form-button {
+  padding-top: 25px;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.input-email {
+  background: #ffffff;
+  border: 1.5px solid #8c8c8c;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.text-left {
+  text-align:left !important
 }

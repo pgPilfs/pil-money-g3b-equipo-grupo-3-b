@@ -2,15 +2,23 @@
   <div class="card register-form">
     <mat-stepper #stepper>
       <mat-step>
-        <h3 class="card-title text-left">
+        <h3 class="card-title">
           <span> Para crear tu cuenta necesitamos validar tus datos </span>
         </h3>
         <p>
           El proceso puede tomarte unos minutos. Recordá tener a mano tu DNI.
         </p>
-        <form>
-          <button type="submit" class="btn btn-block">Continuar</button>
-        </form>
+        <p>
+          El proceso puede tomarte unos minutos. Recordá tener a mano tu DNI.
+        </p>
+        <p>
+          El proceso puede tomarte unos minutos. Recordá tener a mano tu DNI.
+        </p>
+        <div class="form-button">
+          <button mat-button matStepperNext type="submit" class="btn btn-block">
+            Continuar
+          </button>
+        </div>
       </mat-step>
       <mat-step>
         <h3>Tus datos</h3>
@@ -20,26 +28,53 @@
         </p>
         <button>Validar e-mail</button>
         <button>Validar tu identidad</button>
+        <div class="form-button">
+          <button mat-button matStepperNext type="submit" class="btn btn-block">
+            Continuar
+          </button>
+        </div>
       </mat-step>
-      <mat-step>
-        <h3>Ingresa tu e-mail</h3>
-        <p>Te enviaremos un mensaje para confirmarlo.</p>
-        <input placeholder="E-mail" /> <br />
-        <button>Enviar mail de confirmación</button>
+      <mat-step
+        required
+        errorMessage="E-mail is required."
+      >
+        <form [formGroup]="firstFormGroup">
+          <h3>Ingresa tu e-mail</h3>
+          <p>Te enviaremos un mensaje para confirmarlo.</p>
+          <mat-form-field appearance="fill">
+            <mat-label>E-mail</mat-label><br />
+            <input
+              class="input-email"
+              matInput
+              placeholder="Correo electronico"
+            />
+          </mat-form-field>
+          <div class="form-button">
+            <button
+              mat-button
+              matStepperNext
+              type="submit"
+              class="btn btn-block"
+              type="submit"
+            >
+              Enviar mail de confirmación
+            </button>
+          </div>
+        </form>
       </mat-step>
       <mat-step>
         <p>Ingresa el codigo que te enviamos por e-mail</p>
 
-        <input placeholder="Codigo" /> <br />
-        <button>Confirmar codigo</button>
+        <input class="input-email" type="number" placeholder="Codigo" /> <br />
+        <div class="form-button">
+          <button mat-button matStepperNext type="submit" class="btn btn-block">
+            Confirmar código
+          </button>
+        </div>
       </mat-step>
 
-      <mat-step
-        [stepControl]="secondFormGroup"
-        errorMessage="Necesitamos una foto de tu DNI."
-      >
-        <form [formGroup]="secondFormGroup">
-          <ng-template matStepLabel>Necesitamos una foto</ng-template>
+      <mat-step>
+        <form>
           <mat-form-field appearance="fill">
             <mat-label>Foto</mat-label>
             <input
@@ -49,10 +84,11 @@
               (change)="processFile(imageInput)"
             />
           </mat-form-field>
-          <div>
-            <p>Go to a different step to see the error state</p>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+
+          <div class="form-button">
+            <button mat-button matStepperNext class="btn btn-block">
+              Continuar
+            </button>
           </div>
         </form>
       </mat-step>
@@ -61,23 +97,37 @@
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Fill out your name</ng-template>
           <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
+            <h3 class="card-title text-left">
+              <span> Elige un nombre de usuario y una contraseña </span>
+            </h3>
             <input
               matInput
-              placeholder="Last name, First name"
+              placeholder="Nombre de usuario"
+              formControlName="firstCtrl"
+              required
+            />
+            <input
+              matInput
+              placeholder="Contraseña"
+              formControlName="firstCtrl"
+              required
+            />
+            <input
+              matInput
+              placeholder="Repetir contraseña"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
           <div>
-            <p>Go to a different step to see the error state</p>
-            <button mat-button matStepperNext>Next</button>
+            <button mat-button matStepperPrevious>Continuar</button>
+            <button mat-button matStepperNext>Atrás</button>
           </div>
         </form>
       </mat-step>
       <mat-step>
         <ng-template matStepLabel>Done</ng-template>
-        <p>You are now done.</p>
+        <p>Validamos tu información.</p>
         <div>
           <button mat-button matStepperPrevious>Back</button>
           <button mat-button (click)="stepper.reset()">Reset</button>
