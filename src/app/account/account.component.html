@@ -1,37 +1,60 @@
 <body>
-  <div class="container">
-    <!-- Box A -->
-    <div class="box">
-      <app-balance></app-balance>
+  <div class="wrapper">
+    <div class="slidenav">
+      <nav>
+        <h1 class="title">{{title}}</h1>
+        <ul>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+          <li>
+            <a>Thing</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <!-- Box B -->
+    <div class="site">
+      <div class="container">
+        <!-- Box A -->
+        <div class="box">
+          <app-balance></app-balance>
+        </div>
+        <!-- Box B -->
 
-    <div class="box large">
-      <app-movements></app-movements>
-    </div>
-    <!-- Box C -->
-    <div class="box">
-      <h2>Los botones de la foto</h2>
-    <div>
-        <button type="submit" routerLink="/services">Pagar Servicios</button>
-    </div>
-    <div>
-        <button type="submit" routerLink="/retiros">Retirar Dinero</button>
-    </div>
-      
-    </div>
-    <!-- Box D -->
-    <div class="box">
-      <h2>Cotizaciones</h2>
-      <p>Bilardo</p>
-      <p>Bielsa</p>
-      <p>Oscar Ruggeri</p>
-    </div>
-    <!-- Box E -->
-    <div class="box">
-      <h2>Facturas por vencer</h2>
-      <p>Epec</p>
-      <p>Bielsa</p>
+        <div class="box large">
+          <app-movements></app-movements>
+        </div>
+        <!-- Box C -->
+        <div class="box">
+          <app-group-operations></app-group-operations>
+        </div>
+        <!-- Box D -->
+        <div class="box">
+          <app-cotizaciones></app-cotizaciones>
+        </div>
+        <!-- Box E -->
+        <div class="box">
+          <app-facturas></app-facturas>
+        </div>
+      </div>
     </div>
   </div>
 </body>

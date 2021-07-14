@@ -1,5 +1,6 @@
 body {
   background-color: #f0f0f0;
+  height: 150vh;
 }
 
 .large {
@@ -50,13 +51,30 @@ body {
   font-size: 36px;
 }
 
-
 @media (max-width: 1050px) {
-  .large .container .box {
-    grid-template-columns: repeat(1, 1fr); 
-    grid-row: span 1;
+  .container .box {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 300px 300px;
   }
   .large {
     display: none;
   }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 230px 100px;
+  grid-gap: 30px;
+  background-color: #fff;
+}
+
+.slidenav{
+  background-color: #00B3A6;
+  padding: 10%;
+}
+
+.title{
+  font-family: Roboto;
+  color:white;
+  font-weight: 500;
 }

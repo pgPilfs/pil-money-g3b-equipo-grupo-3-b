@@ -21,6 +21,10 @@ import { TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
+import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
+import { FacturasComponent } from './facturas/facturas.component';
+import { GroupOperationsComponent } from './group-operations/group-operations.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +44,10 @@ import {MatIconModule} from '@angular/material/icon';
     ActionComponent,
     TransferComponent,
     RetirosComponent,
+    CotizacionesComponent,
+    FacturasComponent,
+    GroupOperationsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

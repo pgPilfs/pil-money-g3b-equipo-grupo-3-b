@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div class="global-container">
   <div class="card register-form">
     <mat-stepper #stepper>
@@ -34,10 +36,7 @@
           </button>
         </div>
       </mat-step>
-      <mat-step
-        required
-        errorMessage="E-mail is required."
-      >
+      <mat-step required errorMessage="E-mail is required.">
         <form [formGroup]="firstFormGroup">
           <h3>Ingresa tu e-mail</h3>
           <p>Te enviaremos un mensaje para confirmarlo.</p>
