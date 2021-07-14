@@ -1,49 +1,42 @@
+.b_color {
+  color: #3700b3;
+}
+
 .account {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile {
-    display: flex;
-    align-items: center;
-    height: 60px;
-    margin: 20px 0;
-  }
-    
-  .profile_name {
-    font-weight: 600;
-    margin: 0 20px;
-    font-size: 15px;
-  }
-  
-  .balance {
-    margin: 20px 0;
-  }
-  
-  .balance_text {
-    font-size: 15px;
-    color: #979797;
-    margin-bottom: 10px;
-  }
-  
-  .amount {
-    font-weight: 600;
-    font-size: 36px;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-    border-radius: 20px;
-    padding: 25px 30px;
-  }
-  
-  .card_information {
-    display: flex;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance {
+  margin: 20px 0;
+}
+
+.balance_text {
+  font-size: 15px;
+  color: #979797;
+}
+
+.amount {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.card_button {
+  padding-left: 5%;
+}
+.buttons {
+  background: #f2e7fe;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 4%;
+  margin-left: 7%;
+  -webkit-appearance:initial;
+  -webkit-appearance: inherit;  
+  border: none;
+}
+.card_information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

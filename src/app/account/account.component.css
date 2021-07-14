@@ -1,6 +1,5 @@
 body {
-  background-color: rgb(245, 245, 245);
-  height: 150vh;
+  background-color: #f0f0f0;
 }
 
 .large {
@@ -49,4 +48,15 @@ body {
 .amount {
   font-weight: 600;
   font-size: 36px;
+}
+
+
+@media (max-width: 1050px) {
+  .large .container .box {
+    grid-template-columns: repeat(1, 1fr); 
+    grid-row: span 1;
+  }
+  .large {
+    display: none;
+  }
 }

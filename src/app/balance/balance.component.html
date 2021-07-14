@@ -1,25 +1,27 @@
-<h5>Hello {{ name }}!</h5>
-<br />
-<div class="card">
-  <div class="card__information__text">Caja de ahorro $ 983 0123456789</div>
-</div>
-<div class="balance">
-  <div class="balance_text">Saldo disponible</div>
-
-  <span class="amount">$ {{ balance }}</span>
+<body>
   <br />
-  <button
-    class="card__button"
-    routerLink="/operations/action"
-    routerLinkActive="active"
-  >
-    Ingresar dinero
-  </button>
-  <button
-    class="card__button"
-    routerLink="/operations/transfer"
-    routerLinkActive="active"
-  >
-    Transferir dinero
-  </button>
-</div>
+  <div>Caja de ahorro {{caja_de_ahorro}} </div>
+  <hr />
+
+  <div class="balance">
+    <div class="balance_text">Saldo disponible</div>
+    <span class="amount b_color">$ {{ balance }}</span>
+    <hr />
+  </div>
+  <div class="card_button">
+    <button
+      class="b_color buttons"
+      routerLink="/operations/action"
+      routerLinkActive="active"
+    >
+      Ingresar dinero
+    </button>
+    <button
+      class="b_color buttons"
+      routerLink="/operations/transfer"
+      routerLinkActive="active"
+    >
+      Transferir dinero
+    </button>
+  </div>
+</body>

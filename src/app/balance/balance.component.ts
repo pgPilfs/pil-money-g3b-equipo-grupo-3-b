@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BalanceComponent implements OnInit {
   name = 'Ricky Dinero';
-  balance = 10.00;
+  balance: string = "25000.00";
+  caja_de_ahorro: string = "$ 983 0123456789"
   money = 15;
   constructor() {}
 
