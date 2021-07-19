@@ -25,6 +25,8 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { FacturasComponent } from './facturas/facturas.component';
 import { GroupOperationsComponent } from './group-operations/group-operations.component';
 import { HeaderComponent } from './header/header.component';
+import { BankAccComponent } from './retiros/bank-acc/bank-acc.component';
+import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { HeaderComponent } from './header/header.component';
     FacturasComponent,
     GroupOperationsComponent,
     HeaderComponent,
+    BankAccComponent,
+    EfecPuntComponent,
   ],
   imports: [
     BrowserModule,
