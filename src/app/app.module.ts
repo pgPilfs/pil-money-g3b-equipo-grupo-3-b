@@ -25,6 +25,7 @@ import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { FacturasComponent } from './facturas/facturas.component';
 import { GroupOperationsComponent } from './group-operations/group-operations.component';
 import { HeaderComponent } from './header/header.component';
+import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { HeaderComponent } from './header/header.component';
     FacturasComponent,
     GroupOperationsComponent,
     HeaderComponent,
+    LeftNavBarComponent,
   ],
   imports: [
     BrowserModule,
