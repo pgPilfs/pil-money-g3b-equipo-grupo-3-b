@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-retiros',
   templateUrl: './retiros.component.html',
@@ -13,3 +14,5 @@ export class RetirosComponent implements OnInit {
   }
 
 }
+
+

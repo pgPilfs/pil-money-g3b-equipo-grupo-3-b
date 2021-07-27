@@ -26,6 +26,8 @@ import { FacturasComponent } from './facturas/facturas.component';
 import { GroupOperationsComponent } from './group-operations/group-operations.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
+import { BankAccComponent } from './retiros/bank-acc/bank-acc.component';
+import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
     GroupOperationsComponent,
     HeaderComponent,
     LeftNavBarComponent,
+    BankAccComponent,
+    EfecPuntComponent,
   ],
   imports: [
     BrowserModule,
