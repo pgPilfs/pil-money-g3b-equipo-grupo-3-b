@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -17,7 +17,7 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { OperationsComponent } from './operations/operations.component';
 import { ExchangeComponent } from './operations/exchange/exchange.component';
 import { ActionComponent } from './operations/action/action.component';
-import { TransferComponent } from './operations/transfer/transfer.component';
+import { TipoCuentaPipe, TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
@@ -28,6 +28,10 @@ import { HeaderComponent } from './header/header.component';
 import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
 import { BankAccComponent } from './retiros/bank-acc/bank-acc.component';
 import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
+import { StepperComponent } from './operations/transfer/stepper';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CdkStepperModule } from '@angular/cdk/stepper';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -54,6 +58,8 @@ import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
     LeftNavBarComponent,
     BankAccComponent,
     EfecPuntComponent,
+    StepperComponent,
+    TipoCuentaPipe
   ],
   imports: [
     BrowserModule,
@@ -61,6 +67,11 @@ import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
     MatIconModule,
     AppRoutingModule,
     NoopAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CdkStepperModule,
+    BrowserAnimationsModule,
+    NgxMaskModule.forRoot(),
     RouterModule.forRoot([
       {
         path: 'operations',
@@ -84,6 +95,6 @@ import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
     ]),
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, TransferComponent]
 })
 export class AppModule {}

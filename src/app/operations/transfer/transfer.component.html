@@ -1,39 +1,207 @@
-<div class="container-fluid col-8">
-    <form class="card">
-        <div class="card-header">Transferir a otras cuentas en dólares</div>
-        <div class="card-body">
-            <div class="mb-3 col-8">
-                <label for="cuenta" class="form-label">Cuenta destino</label>
-                <div class="input-group" id="cuenta">
-                    <span class="input-group-text" id="cuenta">CBU / CVU</span>
-                    <input type="text" pattern="\d*" maxlength="22" class="form-control">
+<app-stepper #stepper>
+      <!-- Paso 1 -->
+      <cdk-step [stepControl]="formgroup">
+        <form [formGroup]="formgroup">
+          <div
+            class="card p-3 shadow-sm col-10"
+            [@opacidad]="stepper.selectedIndex === 0 ? 'visible' : 'hide'"
+          >
+            <div class="card-body">
+              <h3>Tranferencias</h3>
+              <hr />
+              <fieldset class="mb-4">
+                <legend class="fw-light">DATOS DE DÉBITO</legend>
+                <div class="row">
+                  <div class="col-6">
+                    <label for="debit" class="form-label">Cuenta débito</label>
+                    <select
+                      class="form-select"
+                      id="debit"
+                      placeholder="CBU / CVU"
+                      *ngFor="let origen of origenes"
+                      formControlName="débito"
+                    >
+                      <option [ngValue]="origen">
+                        {{ origen | TipoCuenta }}
+                        {{ origen.Id | mask: "0000000-0 000-0" }}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-4">
+                    <label for="monto" class="form-label">Monto</label>
+                    <input
+                      type="text"
+                      id="monto"
+                      required
+                      prefix="$ "
+                      mask="separator,00"
+                      thousandSeparator="."
+                      placeholder="$"
+                      class="form-control form-control fs-3 py-1"
+                      formControlName="monto"
+                    />
+                  </div>
                 </div>
-            </div>
-            <div class="mb-3 col-4">
-               <label for="importe" class="form-label">Importe a transferir</label>
-               <div class="input-group">
-                    <span class="input-group-text" id="importe">USD</span>
-                    <input type="number" class="form-control">
+              </fieldset>
+  
+              <fieldset class="mb-3">
+                <legend class="fw-light">DATOS DE CRÉDITO</legend>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="credit" class="form-label">Cuenta crédito</label>
+                    <input
+                      class="form-control"
+                      id="credit"
+                      placeholder="CBU / CVU"
+                      mask="9999999999999999999999"
+                      formControlName="cbu"
+                    />
+                  </div>
+                  <div class="col" formGroupName="info">
+                    <label for="concept" class="form-label">Concepto</label>
+                    <select class="form-select" formControlName="concepto">
+                      <option
+                        [ngValue]="concepto"
+                        *ngFor="let concepto of conceptos"
+                      >
+                        {{ concepto.nombre }}
+                      </option>
+                    </select>
+                  </div>
                 </div>
+                <div class="row" formGroupName="info">
+                  <div class="col">
+                    <label for="desc" class="form-label">Descripción</label>
+                    <textarea
+                      class="form-control"
+                      id="desc"
+                      formControlName="desc"
+                    ></textarea>
+                  </div>
+                  <div class="col">
+                    <label for="email" class="form-label"
+                      >E-mail de notificación</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      formControlName="email"
+                    />
+                  </div>
+                </div>
+              </fieldset>
+              <button
+                type="button"
+                class="btn btn-primary float-end my-3 p-2 rounded-pill w-25"
+                (click)="Validar()"
+                [disabled]="formgroup.invalid"
+              >
+                Continuar
+              </button>
             </div>
-            <div class="mb-3 col-4">
-                <label for="concept" class="form-label">Concepto</label>
-                <select class="form-select">
-                        <option value="1">Alquileres</option>
-                        <option value="2">Couta</option>
-                        <option value="3">Expensas</option>
-                        <option value="4">Factura</option>
-                        <option value="5">Prestamo</option>
-                        <option value="6">Seguro</option>
-                        <option value="7" selected>Varios</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="ref" class="form-label">Referencia/Descripción</label>
-                <textarea class="form-control" id="ref" style="height: 100px"></textarea>
-            </div>
-                <button type="submit" class="btn btn-primary">Transferir</button>
+           <ng-container *ngIf="error && formgroup.valid">
+              <div id="alerta" class="alert alert-warning"> {{error}} </div>
+            </ng-container>
+          </div>
+        </form>
+        <div class="alert alert-secondary col-3 my-3" role="alert">
+          <b>Prueba CBU</b>
+          <li>4567891011100000987654</li>
+          <li>9876543033308000123456</li>
         </div>
-    </form>
-</div>
-
+      </cdk-step>
+      <!-- Paso 2 -->
+      <cdk-step>
+        <div
+          class="card p-3 shadow-sm col-7"
+          [@opacidad]="stepper.selectedIndex === 1 ? 'visible' : 'hide'"
+        >
+          <div class="card-body">
+            <h3>Confirmar transferencia</h3>
+            <hr />
+            <fieldset class="mb-4" style="font-size: large">
+              <legend class="fw-bold">TRANSFIRIENDO A</legend>
+              <div class="row">
+                <label class="col-2 col-form-label">Titular</label>
+                <div class="col col-form-label">
+                  <span>{{ transfer.destino?.titular }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-2 col-form-label">Monto</label>
+                <div class="col col-form-label">
+                  <span prefix="$ ">{{ transfer.monto | currency }}</span>
+                </div>
+              </div>
+            </fieldset>
+  
+            <fieldset class="mb-4" style="font-size: large">
+              <legend class="fw-bold">DETALLE DE TRANSFERENCIA</legend>
+              <div class="row">
+                <label class="col-3 col-form-label">Entidad</label>
+                <div class="col col-form-label">
+                  <span>{{ transfer.destino?.entidad.nombre }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-3 col-form-label">CBU</label>
+                <div class="col col-form-label">
+                  <span>{{ transfer.destino?.CBU }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-3 col-form-label">Concepto</label>
+                <div class="col col-form-label">
+                  <span>{{ transfer.info.concepto.nombre }}</span>
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-3 col-form-label">Email</label>
+                <div class="col col-form-label">
+                  <span>{{ transfer.info.email }}</span>
+                </div>
+              </div>
+            </fieldset>
+            <button
+              type="button"
+              class="btn btn-primary float-end my-3 p-2 rounded-pill"
+              style="width: 10em"
+              (click)="Transferir()"
+            >
+              Transferir
+            </button>
+            <button
+              class="btn btn-danger float-end my-3 me-3 p-2 rounded-pill"
+              style="width: 8em"
+              cdkStepperPrevious
+            >
+              Volver
+            </button>
+          </div>
+        </div>
+      </cdk-step>
+      <!-- Paso 3 -->
+      <cdk-step>
+        <div
+          class="card p-3 shadow-sm col-8"
+          [@opacidad]="stepper.selectedIndex === 2 ? 'visible' : 'hide'"
+        >
+          <div class="card-body text-center">
+            <div class="row">
+              <img src="/assets/transfer.jpg" class="rounded" />
+              <h3>Transferencia realizada con éxito</h3>
+            </div>
+            <div class="row">
+              <button
+                class="btn btn-primary btn-lg mx-auto my-3 p-2 rounded-pill"
+                style="width: 10em"
+                (click)="formgroup.reset(); stepper.reset()"
+              >
+                Volver al inicio
+              </button>
+            </div>
+          </div>
+        </div>
+      </cdk-step>
+</app-stepper>

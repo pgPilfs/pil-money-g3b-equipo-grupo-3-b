@@ -1,23 +1,6 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-3">
-        
-                <ul class="list-group">
-                    <li class="list-group-item list-group-item-primary">Operaciones en moneda extranjera</li>
-                    <li class="list-group-item p-2">
-                        <div class="list-group list-group-flush">
-                            <a class="list-group-item list-group-item-action" routerLink="/operations/transfer" routerLinkActive="active">Transferencia</a>
-                            <a class="list-group-item list-group-item-action" routerLink="/operations/exchange" routerLinkActive="active">Compra y venta</a>
-                            <a class="list-group-item list-group-item-action" routerLink="/operations/action" routerLinkActive="active">Consulta de movimiento</a>
-                        </div>
-                    </li>
-                
-                </ul>
-        </div>
-        <div class="col">
-            <router-outlet></router-outlet>
-        </div>
-    </div>
+<div class="container">
+    <app-transfer></app-transfer>
 </div>
+
 
 
