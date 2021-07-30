@@ -1,10 +1,11 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { CdkStepper } from '@angular/cdk/stepper';
-import { Component, OnInit, Pipe, PipeTransform, ViewChild } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform, TemplateRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import CuentaAhorro from './model/ahorro.model';
 import Cuenta from './model/cuenta.model';
 import { Concepto, Contacto, Transferencia } from './model/interfaces';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-transfer',
@@ -30,16 +31,17 @@ import { Concepto, Contacto, Transferencia } from './model/interfaces';
 })
 export class TransferComponent implements OnInit {
   @ViewChild('stepper') stepper: CdkStepper;
+  @ViewChild('dialog') dialogTemplate: TemplateRef<any>;
 
   formgroup: FormGroup;
-  error : any | null;
+  error : any = null;
   conceptos: Array<Concepto> = [];
 
   origenes: Array<Cuenta> = [];
   destinos: Array<Contacto> = [];
   transfer: Transferencia = { info: { concepto: {} } };
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public dialog: MatDialog) {
     
     this.origenes.push(new CuentaAhorro('123456701230', {} , 15000));
     this.destinos.push({
@@ -92,8 +94,6 @@ export class TransferComponent implements OnInit {
 
   Validar() {
 
-    this.error = null;
-
     this.transfer.destino = this.selected;
     this.transfer.info = this.formgroup.get("info").value;
     this.transfer.monto = this.formgroup.get('monto').value;
@@ -111,8 +111,8 @@ export class TransferComponent implements OnInit {
       }else throw 'El monto ingresado no es válido';
 
     } catch (error) {
-
       this.error = error;
+      this.dialog.open(this.dialogTemplate)
     } 
 
   }
@@ -121,7 +121,7 @@ export class TransferComponent implements OnInit {
     
     this.origen.Transferir(this.transfer);
     this.stepper.next();
-    
+   
   }
 
 }
@@ -132,5 +132,7 @@ export class TipoCuentaPipe implements PipeTransform {
     return (value instanceof CuentaAhorro ? 'CA' : 'CTE').concat(' ', value.Moneda.simbolo);
   }
 }
+
+
 
 

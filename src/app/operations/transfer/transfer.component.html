@@ -95,16 +95,23 @@
                 type="button"
                 class="btn btn-primary float-end my-3 p-2 rounded-pill w-25"
                 (click)="Validar()"
-                [disabled]="formgroup.invalid"
+                [disabled]="formgroup.invalid"               
               >
                 Continuar
               </button>
             </div>
-           <ng-container *ngIf="error && formgroup.valid">
-              <div id="alerta" class="alert alert-warning"> {{error}} </div>
-            </ng-container>
           </div>
         </form>
+        <ng-template #dialog >
+          <div style="width: 20em">
+            <span mat-dialog-title>Error</span>
+            <span mat-dialog-content>{{error}}</span>
+            <div mat-dialog-actions>
+              <button class="btn btn-primary my-3" mat-dialog-close>Cerrar</button>
+            </div>
+          </div>
+       </ng-template>
+
         <div class="alert alert-secondary col-3 my-3" role="alert">
           <b>Prueba CBU</b>
           <li>4567891011100000987654</li>
