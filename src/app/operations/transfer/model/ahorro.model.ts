@@ -1,16 +1,15 @@
 import Cuenta from "./cuenta.model";
-import { Contacto, Transferencia } from "./interfaces";
+import { Contacto, Moneda, Transferencia } from "./interfaces";
 
 class CuentaAhorro extends Cuenta{
     
-    constructor(id : string, contacto : Contacto, saldo : number){
-        super(id, contacto, saldo);
+    constructor(id : string, contacto : Contacto, saldo : number, moneda?: Moneda){
+        super(id, contacto, saldo, moneda);
     }
 
     Transferir(transfer : Transferencia): void {
 
         this.Saldo -= transfer.monto;
-        console.log(this.Saldo);
         // realizar transacción en la base de datos ...
         // Insertar registro a la tabla Transferencia
      
