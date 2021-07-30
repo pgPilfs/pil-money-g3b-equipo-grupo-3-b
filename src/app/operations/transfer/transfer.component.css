@@ -1,0 +1,15 @@
+form{
+    border-radius: 10px;
+}
+
+legend{
+    font-size: medium;
+}
+
+input, select{
+    padding: 12px;
+}
+
+textarea{
+    height: 100%;
+}
