@@ -32,6 +32,7 @@ import { StepperComponent } from './operations/transfer/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { NgxMaskModule } from 'ngx-mask';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { NgxMaskModule } from 'ngx-mask';
     CdkStepperModule,
     BrowserAnimationsModule,
     NgxMaskModule.forRoot(),
+    MatDialogModule,
     RouterModule.forRoot([
       {
         path: 'operations',
