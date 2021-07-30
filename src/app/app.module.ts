@@ -95,6 +95,6 @@ import { NgxMaskModule } from 'ngx-mask';
     ]),
   ],
   providers: [],
-  bootstrap: [AppComponent, TransferComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
