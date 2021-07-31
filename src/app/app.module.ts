@@ -29,8 +29,8 @@ import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
 import { StepperComponent } from './operations/transfer/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkStepperModule } from '@angular/cdk/stepper';
-import { NgxMaskModule } from 'ngx-mask';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [

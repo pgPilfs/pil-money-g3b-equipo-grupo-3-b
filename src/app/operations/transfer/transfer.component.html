@@ -18,10 +18,9 @@
                       class="form-select"
                       id="debit"
                       placeholder="CBU / CVU"
-                      *ngFor="let origen of origenes"
                       formControlName="débito"
                     >
-                      <option [ngValue]="origen">
+                      <option [ngValue]="origen" *ngFor="let origen of origenes">
                         {{ origen | TipoCuenta }}
                         {{ origen.Id | mask: "0000000-0 000-0" }}
                       </option>
@@ -33,10 +32,10 @@
                       type="text"
                       id="monto"
                       required
-                      prefix="$ "
+                      prefix="{{origen?.Moneda?.simbolo}} "
                       mask="separator,00"
                       thousandSeparator="."
-                      placeholder="$"
+                      placeholder="{{origen?.Moneda?.simbolo}}"
                       class="form-control form-control fs-3 py-1"
                       formControlName="monto"
                     />
@@ -116,6 +115,8 @@
           <b>Prueba CBU</b>
           <li>4567891011100000987654</li>
           <li>9876543033308000123456</li>
+          <hr>
+          <span><h5><b>Saldo:</b> {{origen?.Saldo | currency: origen?.Moneda?.simbolo + " " }}</h5></span>
         </div>
       </cdk-step>
       <!-- Paso 2 -->
@@ -138,7 +139,7 @@
               <div class="row">
                 <label class="col-2 col-form-label">Monto</label>
                 <div class="col col-form-label">
-                  <span prefix="$ ">{{ transfer.monto | currency }}</span>
+                  <span prefix="$ ">{{ transfer.monto | currency: origen?.Moneda?.simbolo + " " }}</span>
                 </div>
               </div>
             </fieldset>

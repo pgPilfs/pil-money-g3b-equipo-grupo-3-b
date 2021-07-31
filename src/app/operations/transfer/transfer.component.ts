@@ -44,6 +44,7 @@ export class TransferComponent implements OnInit {
   constructor(private fb: FormBuilder, public dialog: MatDialog) {
     
     this.origenes.push(new CuentaAhorro('123456701230', {} , 15000));
+    this.origenes.push(new CuentaAhorro('111456701230', {} , 5000, { tipo:"dolar", simbolo: "U$D" }));
     this.destinos.push({
       CBU: '4567891011100000987654',
       titular: 'Lucas Losada',
@@ -77,7 +78,7 @@ export class TransferComponent implements OnInit {
     this.conceptos.push({ id: 5, nombre: 'Prestamo' });
     this.conceptos.push({ id: 6, nombre: 'Seguro' });
     this.conceptos.push({ id: 7, nombre: 'Varios' });
-    
+
   }
 
   get cbu() {
