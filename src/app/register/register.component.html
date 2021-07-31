@@ -2,7 +2,7 @@
 
 <div class="global-container">
   <div class="card register-form">
-    <mat-stepper linear #stepper>
+    <mat-stepper lineargit  #stepper>
       <mat-step>
         <h3 class="card-title">
           <span> Para crear tu cuenta necesitamos validar tus datos </span>
@@ -31,17 +31,16 @@
         </div>
       </mat-step>
       <mat-step required errorMessage="E-mail is required.">
-        <form [formGroup]="firstFormGroup">
+        <form >
           <h3>Ingresa tu e-mail</h3>
           <p>Te enviaremos un mensaje para confirmarlo.</p>
-          <mat-form-field appearance="fill">
-            <mat-label>E-mail</mat-label><br />
+          <section >
+            <div>E-mail</div>
             <input
               class="input-email"
-              matInput
               placeholder="Correo electronico"
             />
-          </mat-form-field>
+          </section>
           <div class="form-button">
             <button
               mat-button
@@ -66,30 +65,10 @@
         </div>
       </mat-step>
 
-      <mat-step>
+      <mat-step errorMessage="Name is required.">
         <form>
-          <mat-form-field appearance="fill">
-            <mat-label>Foto</mat-label>
-            <input
-              #imageInput
-              type="file"
-              accept="image/*"
-              (change)="processFile(imageInput)"
-            />
-          </mat-form-field>
-
-          <div class="form-button">
-            <button mat-button matStepperNext class="btn btn-block">
-              Continuar
-            </button>
-          </div>
-        </form>
-      </mat-step>
-
-      <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
-        <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Fill out your name</ng-template>
-          <mat-form-field appearance="fill">
+          <section >
             <h3 class="card-title text-left">
               <span> Elige un nombre de usuario y una contraseña </span>
             </h3>
@@ -111,7 +90,7 @@
               formControlName="firstCtrl"
               required
             />
-          </mat-form-field>
+          </section>
           <div>
             <button mat-button matStepperPrevious>Continuar</button>
             <button mat-button matStepperNext>Atrás</button>
