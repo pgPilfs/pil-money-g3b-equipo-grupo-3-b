@@ -21,9 +21,7 @@ import { TipoCuentaPipe, TransferComponent } from './operations/transfer/transfe
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import {MatIconModule} from '@angular/material/icon';
-import { CotizacionesComponent } from './cotizaciones/cotizaciones.component';
 import { FacturasComponent } from './facturas/facturas.component';
-import { GroupOperationsComponent } from './group-operations/group-operations.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
 import { BankAccComponent } from './retiros/bank-acc/bank-acc.component';
@@ -52,9 +50,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     ActionComponent,
     TransferComponent,
     RetirosComponent,
-    CotizacionesComponent,
     FacturasComponent,
-    GroupOperationsComponent,
     HeaderComponent,
     LeftNavBarComponent,
     BankAccComponent,
