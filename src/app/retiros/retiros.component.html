@@ -1,10 +1,10 @@
 <app-left-nav-bar></app-left-nav-bar>
 <div class="cuerpo">
-  <div id="titulo">Retirar dinero</div>
-
+  <div id="titulo">Retiros</div>
+<hr class="line">
   <div id="withdrawals">
-    Puedes optar por retirar a tu cuenta bancaria o retirar en cajero mediante
-    Punto Efectivo con tu número de DNI y teléfono celular.
+    puedes optar por retirar a tu cuenta bancaria o retirar en cajero mediante
+    punto efectivo con tu número de dni y teléfono celular.
   </div>
   <body>
     <div>
@@ -13,12 +13,11 @@
           <div class="card-header" id="headingOne">
             <h5 class="mb-0">
               <button
-                class="btn btn-link"
+                class="btn"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseOne"
                 aria-expanded="false"
-                aria-controls="collapseOne"
-              >
+                aria-controls="collapseOne">
                 Cuenta Bancaria
               </button>
             </h5>
@@ -28,8 +27,7 @@
             id="collapseOne"
             class="collapse"
             aria-labelledby="headingOne"
-            data-parent="#accordion"
-          >
+            data-parent="#accordion">
             <div class="card-body">
               <app-bank-acc></app-bank-acc>
             </div>
@@ -39,12 +37,11 @@
           <div class="card-header" id="headingTwo">
             <h5 class="mb-0">
               <button
-                class="btn btn-link collapsed"
+                class="btn"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseTwo"
                 aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
+                aria-controls="collapseTwo">
                 Punto Efectivo
               </button>
             </h5>
@@ -53,13 +50,15 @@
             id="collapseTwo"
             class="collapse"
             aria-labelledby="headingTwo"
-            data-parent="#accordion"
-          >
+            data-parent="#accordion">
             <div class="card-body">
               <app-efec-punt></app-efec-punt>
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <button class="nxt-button">Continuar</button>
       </div>
     </div>
   </body>
