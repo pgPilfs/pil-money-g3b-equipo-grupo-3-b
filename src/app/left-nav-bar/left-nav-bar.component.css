@@ -1,26 +1,25 @@
+a{
+  text-decoration: none;
+  color: white !important;
+}
+
 nav {
-    position: fixed;
-    width: 298px;
-    height: 100%;
-    background-color: #00B3A6;
-    padding: 1%;
-  }
+  background-color: #00b3a6;
+}
+
 
 nav ul li {
-    padding:3%;
-    text-align: left;
-    padding: 15px 10px;
-    list-style: none; /*quita los estilos por defecto de lista (ese punto feo) */
-    color: white;
-    border: 1px solid white; /*esto es un cuadrado para identificar cada uno, hay que distanciarlos */
-    cursor: pointer; /*esto sirve para que parezca el hacer click xd */
-
+  text-align: left;
+  padding: 15px 10px;
+  list-style: none; /*quita los estilos por defecto de lista (ese punto feo) */
 }
-.title{
+
+hr {
+  color: white;
+}
+.title {
   font-family: Roboto;
-  color:white;
+  color: white;
   font-weight: 500;
-  margin-left: 12%;
-  cursor: pointer;
-  border: 1px solid white; /*acá hay que ver como modificamos el tamaño del hitbox, para que solo aparezca el pointer en las letras WALED */
+  margin-left: 20%;
 }

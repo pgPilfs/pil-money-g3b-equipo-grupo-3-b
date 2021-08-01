@@ -1,6 +1,107 @@
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  padding: 5%;
+  text-align: justify;
+}
+
+.imagen{
+  padding-top: 10%;
+  width: 100%;
+  height: 70%;
+}
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+#contact {
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.contact-content {
+  text-align: center;
+}
+.content {
+  padding: 50px 5% 50px 5%;
+  margin: 0 auto;
+  max-width: 650px;
+}
+.background {
+  background-color: rgb(240, 240, 240);
+
+}
+.content, h1, h1 {
+  text-align: center;
+  font-weight: 500;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  margin-bottom: 15px;
+  border: 0px;
+  border-radius: 2px;
+  font-size: 16px;
+  text-indent: 12px;
+  opacity: 0.8;
+  font-weight: 400;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  background: white;
+  opacity: 1;
+  outline: none;
+}
+textarea {
+  height: 160px;
+  padding-top: 12px;
+  resize: none;
+}
+.submit {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  border-color: black;
+  font-size: initial;
+  color: black;
+  font-weight: bolder;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+  border-radius: 2px;
+}
+.submit:hover {
+  background: black;
+  color: white;
+}
+.boxShadow {
+  -webkit-transition: all 250ms;
+  -moz-transition: all 250ms;
+  transition: all 250ms;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.boxShadow:hover,
+.boxShadow:focus {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}

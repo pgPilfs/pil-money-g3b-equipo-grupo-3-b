@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -17,10 +20,13 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { OperationsComponent } from './operations/operations.component';
 import { ExchangeComponent } from './operations/exchange/exchange.component';
 import { ActionComponent } from './operations/action/action.component';
-import { TipoCuentaPipe, TransferComponent } from './operations/transfer/transfer.component';
+import {
+  TipoCuentaPipe,
+  TransferComponent,
+} from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { FacturasComponent } from './facturas/facturas.component';
 import { HeaderComponent } from './header/header.component';
 import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
@@ -31,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
+import { DepositComponent } from './deposit/deposit.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +63,8 @@ import { NgxMaskModule } from 'ngx-mask';
     BankAccComponent,
     EfecPuntComponent,
     StepperComponent,
-    TipoCuentaPipe
+    TipoCuentaPipe,
+    DepositComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,15 +92,16 @@ import { NgxMaskModule } from 'ngx-mask';
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'deposit', component: DepositComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'services', component: ServiciosComponent },
       { path: 'faq', component: FaqComponent },
-      { path: 'login', component: LoginComponent },
       { path: '', component: LandingComponent },
       { path: 'retiros', component: RetirosComponent },
     ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -4,6 +4,13 @@ body {
     width: 800px; margin: 0 auto;
 }
 
+.wrapper {
+    display: grid;
+    grid-template-columns: 230px 100px;
+    grid-gap: 30px;
+    background-color: #fff;
+  }
+
 #titulo {
     width: 900px; margin: 0 auto;
     height: 50px;
@@ -14,7 +21,6 @@ body {
     line-height: 24px;
     display: flex;
     align-items: center;
-
     color: #000000;
 }
 

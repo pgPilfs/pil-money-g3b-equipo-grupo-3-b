@@ -1,66 +1,69 @@
-<app-left-nav-bar></app-left-nav-bar>
-<div class="cuerpo">
-  <div id="titulo">Retirar dinero</div>
+<div class="wrapper">
+  <app-left-nav-bar></app-left-nav-bar>
 
-  <div id="withdrawals">
-    Puedes optar por retirar a tu cuenta bancaria o retirar en cajero mediante
-    Punto Efectivo con tu número de DNI y teléfono celular.
-  </div>
-  <body>
-    <div>
-      <div id="accordion">
-        <div class="card2">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button
-                class="btn btn-link"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                Cuenta Bancaria
-              </button>
-            </h5>
-          </div>
+  <div class="cuerpo">
+    <div id="titulo">Retirar dinero</div>
 
-          <div
-            id="collapseOne"
-            class="collapse"
-            aria-labelledby="headingOne"
-            data-parent="#accordion"
-          >
-            <div class="card-body">
-              <app-bank-acc></app-bank-acc>
+    <div id="withdrawals">
+      Puedes optar por retirar a tu cuenta bancaria o retirar en cajero mediante
+      Punto Efectivo con tu número de DNI y teléfono celular.
+    </div>
+    <body>
+      <div>
+        <div id="accordion">
+          <div class="card2">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  Cuenta Bancaria
+                </button>
+              </h5>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <app-bank-acc></app-bank-acc>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="card2">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button
-                class="btn btn-link collapsed"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Punto Efectivo
-              </button>
-            </h5>
-          </div>
-          <div
-            id="collapseTwo"
-            class="collapse"
-            aria-labelledby="headingTwo"
-            data-parent="#accordion"
-          >
-            <div class="card-body">
-              <app-efec-punt></app-efec-punt>
+          <div class="card2">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Punto Efectivo
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <app-efec-punt></app-efec-punt>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </body>
+    </body>
+  </div>
 </div>
