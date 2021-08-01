@@ -1,5 +1,11 @@
-.container{
-    padding: 3em;
-    background-color: #F0F0F0;
-    height: 100%;
+.wrapper {
+  display: grid;
+  grid-template-columns: 230px 1000px;
+  grid-gap: 30px;
+  background-color: #fff;
+}
+
+.slidenav {
+  background-color: #00b3a6;
+  padding: 10%;
 }

@@ -1,4 +1,6 @@
-<app-stepper #stepper>
+
+  <div>
+    <app-stepper #stepper>
       <!-- Paso 1 -->
       <cdk-step [stepControl]="formgroup">
         <form [formGroup]="formgroup">
@@ -20,7 +22,10 @@
                       placeholder="CBU / CVU"
                       formControlName="débito"
                     >
-                      <option [ngValue]="origen" *ngFor="let origen of origenes">
+                      <option
+                        [ngValue]="origen"
+                        *ngFor="let origen of origenes"
+                      >
                         {{ origen | TipoCuenta }}
                         {{ origen.Id | mask: "0000000-0 000-0" }}
                       </option>
@@ -32,22 +37,24 @@
                       type="text"
                       id="monto"
                       required
-                      prefix="{{origen?.Moneda?.simbolo}} "
+                      prefix="{{ origen?.Moneda?.simbolo }} "
                       mask="separator,00"
                       thousandSeparator="."
-                      placeholder="{{origen?.Moneda?.simbolo}}"
+                      placeholder="{{ origen?.Moneda?.simbolo }}"
                       class="form-control form-control fs-3 py-1"
                       formControlName="monto"
                     />
                   </div>
                 </div>
               </fieldset>
-  
+
               <fieldset class="mb-3">
                 <legend class="fw-light">DATOS DE CRÉDITO</legend>
                 <div class="row mb-3">
                   <div class="col-6">
-                    <label for="credit" class="form-label">Cuenta crédito</label>
+                    <label for="credit" class="form-label"
+                      >Cuenta crédito</label
+                    >
                     <input
                       class="form-control"
                       id="credit"
@@ -94,29 +101,36 @@
                 type="button"
                 class="btn btn-primary float-end my-3 p-2 rounded-pill w-25"
                 (click)="Validar()"
-                [disabled]="formgroup.invalid"               
+                [disabled]="formgroup.invalid"
               >
                 Continuar
               </button>
             </div>
           </div>
         </form>
-        <ng-template #dialog >
+        <ng-template #dialog>
           <div style="width: 20em">
             <span mat-dialog-title>Error</span>
-            <span mat-dialog-content>{{error}}</span>
+            <span mat-dialog-content>{{ error }}</span>
             <div mat-dialog-actions>
-              <button class="btn btn-primary my-3" mat-dialog-close>Cerrar</button>
+              <button class="btn btn-primary my-3" mat-dialog-close>
+                Cerrar
+              </button>
             </div>
           </div>
-       </ng-template>
+        </ng-template>
 
         <div class="alert alert-secondary col-3 my-3" role="alert">
           <b>Prueba CBU</b>
           <li>4567891011100000987654</li>
           <li>9876543033308000123456</li>
-          <hr>
-          <span><h5><b>Saldo:</b> {{origen?.Saldo | currency: origen?.Moneda?.simbolo + " " }}</h5></span>
+          <hr />
+          <span
+            ><h5>
+              <b>Saldo:</b>
+              {{ origen?.Saldo | currency: origen?.Moneda?.simbolo + " " }}
+            </h5></span
+          >
         </div>
       </cdk-step>
       <!-- Paso 2 -->
@@ -139,11 +153,13 @@
               <div class="row">
                 <label class="col-2 col-form-label">Monto</label>
                 <div class="col col-form-label">
-                  <span prefix="$ ">{{ transfer.monto | currency: origen?.Moneda?.simbolo + " " }}</span>
+                  <span prefix="$ ">{{
+                    transfer.monto | currency: origen?.Moneda?.simbolo + " "
+                  }}</span>
                 </div>
               </div>
             </fieldset>
-  
+
             <fieldset class="mb-4" style="font-size: large">
               <legend class="fw-bold">DETALLE DE TRANSFERENCIA</legend>
               <div class="row">
@@ -212,4 +228,5 @@
           </div>
         </div>
       </cdk-step>
-</app-stepper>
+    </app-stepper>
+  </div>

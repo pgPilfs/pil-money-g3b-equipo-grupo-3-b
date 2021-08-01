@@ -9,6 +9,11 @@ body {
   background-color: #fff;
 }
 
+.slidenav{
+  background-color: #00B3A6;
+  padding: 10%;
+}
+
 .large {
   grid-row-end: span 2;
 }
@@ -66,17 +71,3 @@ body {
     display: none;
   }
 }
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 230px 100px;
-  grid-gap: 30px;
-  background-color: #fff;
-}
-
-.slidenav{
-  background-color: #00B3A6;
-  padding: 10%;
-}
-
-

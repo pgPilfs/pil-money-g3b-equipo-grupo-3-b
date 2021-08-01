@@ -1,84 +1,101 @@
-
 <div class="container-fluid col-auto">
-
-    <div class="card">
-        <div class="card-header">
-            Movimiento de operaciones en dólares
+  <div class="card">
+    <div class="card-header">Movimiento de operaciones en dólares</div>
+    <div class="card-body">
+      <div class="row mb-4">
+        <div class="col-3">
+          <label for="desde" class="form-label">Desde</label>
+          <input
+            type="date"
+            id="desde"
+            class="form-control"
+            min="2000-01-01"
+            max="2100-01-01"
+          />
+        </div>
+        <div class="col-3">
+          <label for="hasta" class="form-label">Hasta</label>
+          <input
+            type="date"
+            id="hasta"
+            class="form-control"
+            min="2000-01-01"
+            max="2100-01-01"
+          />
+        </div>
+        <div class="col align-self-end">
+          <div class="btn-group" id="test">
+            <button type="button" class="btn btn-outline-dark">Hoy</button>
+            <button type="button" class="btn btn-outline-dark">Mes</button>
+            <button type="button" class="btn btn-outline-dark">
+              Trimestre
+            </button>
           </div>
-          <div class="card-body">
-            <div class="row mb-4">
-                <div class="col-3">
-                    <label for="desde" class="form-label">Desde</label>
-                    <input type="date" id="desde" class="form-control" min="2000-01-01" max="2100-01-01">
-                </div>
-                <div class="col-3">
-                    <label for="hasta" class="form-label">Hasta</label>
-                    <input type="date" id="hasta" class="form-control" min="2000-01-01" max="2100-01-01">
-                </div>
-                <div class="col align-self-end">
-                    <div class="btn-group" id="test">
-                        <button type="button" class="btn btn-outline-dark">Hoy</button>
-                        <button type="button" class="btn btn-outline-dark">Mes</button>
-                        <button type="button" class="btn btn-outline-dark">Trimestre</button>
-                    </div>
-                </div>
-            </div>
-            <table class="table align-middle table-striped table-hover mb-4 table-bordered">
-                <thead>
-                    <tr>
-                        <th width="15%">Fecha</th>
-                        <th width="auto">Concepto</th>
-                        <th width="15%">Crédito</th>
-                        <th width="15%">Débito</th>
-                        <th width="15%">Saldo U$D</th>
-                      </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>05/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 500</td>
-                        <td>$ 3000</td>
-                    </tr>
-                    <tr>
-                        <td>04/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 3000</td>
-                        <td>$ 3500</td>
-                    </tr>
-                    <tr>
-                        <td>03/01/21</td>
-                        <td></td>
-                        <td>$ 2000</td>
-                        <td></td>
-                        <td>$ 6500</td>
-                    </tr>
-                    <tr>
-                        <td>02/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 500</td>
-                        <td>$ 4500</td>
-                    </tr>
-                    <tr>
-                        <td>01/01/21</td>
-                        <td></td>
-                        <td>$ 5000</td>
-                        <td></td>
-                        <td>$ 5000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <nav>
-                <ul class="pagination justify-content-end">
-                  <li class="page-item"><a class="page-link"><span>&laquo;</span></a></li>
-                  <li class="page-item"><a class="page-link">1</a></li>
-                  <li class="page-item"><a class="page-link">2</a></li>
-                  <li class="page-item"><a class="page-link">3</a></li>
-                  <li class="page-item"><a class="page-link"><span>&raquo;</span></a></li>
-                </ul>
-              </nav>
-          </div>
-    
+        </div>
+      </div>
+      <table
+        class="table align-middle table-striped table-hover mb-4 table-bordered"
+      >
+        <thead>
+          <tr>
+            <th width="15%">Fecha</th>
+            <th width="auto">Concepto</th>
+            <th width="15%">Crédito</th>
+            <th width="15%">Débito</th>
+            <th width="15%">Saldo U$D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>05/01/21</td>
+            <td></td>
+            <td></td>
+            <td>$ 500</td>
+            <td>$ 3000</td>
+          </tr>
+          <tr>
+            <td>04/01/21</td>
+            <td></td>
+            <td></td>
+            <td>$ 3000</td>
+            <td>$ 3500</td>
+          </tr>
+          <tr>
+            <td>03/01/21</td>
+            <td></td>
+            <td>$ 2000</td>
+            <td></td>
+            <td>$ 6500</td>
+          </tr>
+          <tr>
+            <td>02/01/21</td>
+            <td></td>
+            <td></td>
+            <td>$ 500</td>
+            <td>$ 4500</td>
+          </tr>
+          <tr>
+            <td>01/01/21</td>
+            <td></td>
+            <td>$ 5000</td>
+            <td></td>
+            <td>$ 5000</td>
+          </tr>
+        </tbody>
+      </table>
+      <nav>
+        <ul class="pagination justify-content-end">
+          <li class="page-item">
+            <a class="page-link"><span>&laquo;</span></a>
+          </li>
+          <li class="page-item"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item">
+            <a class="page-link"><span>&raquo;</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

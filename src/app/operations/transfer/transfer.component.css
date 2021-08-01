@@ -1,15 +1,16 @@
-form{
-    border-radius: 10px;
+form {
+  border-radius: 10px;
 }
 
-legend{
-    font-size: medium;
+legend {
+  font-size: medium;
 }
 
-input, select{
-    padding: 12px;
+input,
+select {
+  padding: 12px;
 }
 
-textarea{
-    height: 100%;
+textarea {
+  height: 100%;
 }

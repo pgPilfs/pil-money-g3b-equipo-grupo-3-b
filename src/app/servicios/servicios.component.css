@@ -1,6 +1,34 @@
 .wrapper {
-    display: grid;
-    grid-template-columns: 230px 100px;
-    grid-gap: 30px;
-    background-color: #fff;
-  }
+  display: grid;
+  grid-template-columns: 230px 100px;
+  grid-gap: 30px;
+  background-color: #fff;
+}
+
+.slidenav {
+  background-color: #00b3a6;
+  padding: 10%;
+}
+  
+.htiIbS {
+  justify-self: start;
+  align-items: normal;
+  height: 20%;
+  display: grid;
+  grid-template-columns: repeat(6, 86px);
+  -webkit-box-pack: var(--ntp-item-justify, start);
+  justify-content: var(--ntp-item-justify, start);
+  padding: 24px 56px 24px 24px;
+}
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+::selection {
+  background-color: #b3d4fc;
+  color: #000000;
+  text-shadow: none;
+}

@@ -1,19 +1,19 @@
 thead > * {
-    text-align: center;
+  text-align: center;
 }
 
 tbody > tr > td {
-    text-align: right;
+  text-align: right;
 }
 
 tbody > tr > td:nth-child(1) {
-    text-align: center;
+  text-align: center;
 }
 
 tbody > tr > td:nth-child(2) {
-    text-align: left;
+  text-align: left;
 }
 
-a{
-    color: #212529;
+a {
+  color: #212529;
 }
