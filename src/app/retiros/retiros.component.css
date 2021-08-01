@@ -1,39 +1,93 @@
 body {
     font-family: roboto;
     line-height: 30px;
-    width: 800px; margin: 0 auto;
+    width: 850px; margin: 0 auto;
+    height: 400px;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 230px 100px;
+    grid-gap: 30px;
+    background-color: #fff;
+  }
 
 #titulo {
     width: 900px; margin: 0 auto;
     height: 50px;
-    font-family: roboto;
+    padding-left: 3%;
+    font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-
-    color: #000000;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: #343434;
 }
 
 #withdrawals {
     width: 800px; margin: 0 auto;
     height: 50px;
-    font-family: roboto;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
+    font-size: 23px;
+    line-height: 27px;
+    font-variant: small-caps;
     color: #000000;
+    mix-blend-mode: darken;
+    margin-bottom: 4%;
+    margin-left: 28px;
 }
 .card2 { 
     background: #F2E7FE;
     border-radius: 5px;
+    margin-bottom: 2%;
+    margin-right: 14%;
 }
 .card-body {
     background:#FAF5FE;
+}
+
+.cuerpo {
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 5%;
+    padding-left: 2%;
+    padding-top: 1%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.nxt-button {
+    position: absolute;
+    bottom: 35px;
+    right: 60px;
+    list-style: none;
+    width: 210px;
+    height: 40px;;
+    background: #6200EE;
+    border-radius: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;    
+}
+
+.btn {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 30px;
+    color: #6200EE;
+}
+
+.line {
+    border: 1px solid #bdbdbd;
+    width: 865px;
+    margin-top: 1px;
+    margin-bottom: 3%;
 }

@@ -1,6 +1,12 @@
 body {
   background-color: #f0f0f0;
-  height: 150vh;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 230px 100px;
+  grid-gap: 30px;
+  background-color: #fff;
 }
 
 .large {
@@ -68,9 +74,5 @@ body {
   background-color: #fff;
 }
 
-.slidenav{
-  background-color: #00B3A6;
-  padding: 10%;
-}
 
 

@@ -1,30 +1,38 @@
 <nav>
-  <h1 class="title">{{ title }}</h1>
+  <h1 routerLink="/" routerLinkActive="active" class="title">{{ title }}</h1>
   <ul>
+    <hr />
     <li>
-      <a>Thing1</a>
+      <a routerLink="/account" routerLinkActive="active">Cuentas</a>
+    </li>
+    <hr />
+    <li>
+      <a routerLink="/operations/transfer" routerLinkActive="active"
+        >Transferencias</a
+      >
     </li>
     <li>
-      <a>Thing2</a>
+      <a routerLink="/operations/exchange" routerLinkActive="active"
+        >Extracciones</a
+      >
     </li>
     <li>
-      <a>Thing3</a>
+      <a routerLink="/deposit" routerLinkActive="active">Depositar dinero</a>
     </li>
     <li>
-      <a>Thing4</a>
+      <a routerLink="/services" routerLinkActive="active">Pago de servicios</a>
     </li>
     <li>
-      <a>Thing5</a>
+      <a routerLink="/operations/action" routerLinkActive="active"
+        >Compra y venta de dolares</a
+      >
+    </li>
+    <hr />
+    <li>
+      <a routerLink="/faq" routerLinkActive="active">Preguntas Frecuentes</a>
     </li>
     <li>
-      <a>Thing6</a>
-    </li>
-    <li>
-      <a>Thing7</a>
-    </li>
-    <li>
-      <a>Thing8</a>
+      <a routerLink="/contact" routerLinkActive="active">Contacto</a>
     </li>
   </ul>
 </nav>
- 
