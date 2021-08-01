@@ -18,19 +18,10 @@ body {
     padding-left: 3%;
     font-family: Roboto;
     font-style: normal;
-<<<<<<< HEAD
-    font-weight: normal;
-    font-size: 26px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #000000;
-=======
     font-weight: 500;
     font-size: 36px;
     line-height: 42px;
     color: #343434;
->>>>>>> dbe84be38893235399a10b92de3a6fe06de272d2
 }
 
 #withdrawals {

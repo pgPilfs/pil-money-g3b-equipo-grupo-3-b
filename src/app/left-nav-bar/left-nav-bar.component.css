@@ -5,6 +5,7 @@ a{
 
 nav {
   background-color: #00b3a6;
+  padding: 10%;
 }
 
 
@@ -22,4 +23,5 @@ hr {
   color: white;
   font-weight: 500;
   margin-left: 20%;
+  cursor: pointer;
 }
