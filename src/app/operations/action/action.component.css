@@ -1,12 +1,9 @@
-thead > * {
+thead > tr > th {
     text-align: center;
+    font-weight: normal;
 }
 
 tbody > tr > td {
-    text-align: right;
-}
-
-tbody > tr > td:nth-child(1) {
     text-align: center;
 }
 

@@ -5,6 +5,11 @@
             Movimiento de operaciones en dólares
           </div>
           <div class="card-body">
+            <div class="col-3 float-end" style="margin-top: 2em;">
+                <select class="form-select" id="cuenta">
+                    <option [value]="null" hidden selected>Cuenta</option>
+                </select>
+            </div>
             <div class="row mb-4">
                 <div class="col-3">
                     <label for="desde" class="form-label">Desde</label>
@@ -16,13 +21,16 @@
                 </div>
                 <div class="col align-self-end">
                     <div class="btn-group" id="test">
-                        <button type="button" class="btn btn-outline-dark">Hoy</button>
-                        <button type="button" class="btn btn-outline-dark">Mes</button>
-                        <button type="button" class="btn btn-outline-dark">Trimestre</button>
+                        <input type="radio" class="btn-check" name="filter" id="hoy">
+                        <label class="btn btn-outline-dark" for="hoy">Hoy</label>
+                        <input type="radio" class="btn-check" name="filter" id="mes">
+                        <label class="btn btn-outline-dark" for="mes">Mes</label>
+                        <input type="radio" class="btn-check" name="filter" id="trimestre">
+                        <label class="btn btn-outline-dark" for="trimestre">Trimestre</label>
                     </div>
                 </div>
             </div>
-            <table class="table align-middle table-striped table-hover mb-4 table-bordered">
+            <table class="table align-middle table-hover mb-4">
                 <thead>
                     <tr>
                         <th width="15%">Fecha</th>
