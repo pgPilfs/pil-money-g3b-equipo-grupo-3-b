@@ -2,26 +2,66 @@
   <div class="slidenav">
     <app-left-nav-bar></app-left-nav-bar>
   </div>
-
-  <div>
-    <h1>Despositar</h1>
-    <p>Elegí la moneda que vas a ingresar</p>
-    <p>Pesos</p>
-    <p>Dolar</p>
-
-    <p>Ingresa dinero a tu cuenta</p>
-    <p>
-      Para ingresar pesos debes realizar una trasnerencia a la siguiente cuenta:
-    </p>
-    <p>Podés ingresar hasta 50.000 ARS ¿Cómo funcionan los limites?</p>
-    <div>
-      <p>Razon social: WALLET TRADE SRL</p>
-      <p>CUIT: 123456789</p>
-      <p>Banco: Banco nNdustrial SA Sucursal 1</p>
-      <p>Cuenta corriente 1-2346789/10</p>
-
-      <p>CBU: 123456789013245676890</p>
-      <p>ALIAS: WALLET.ARS</p>
+  <div class="cuerpo">
+    <div id="titulo">Depositar</div>
+    <hr class="line" />
+    <div id="withdrawals">
+      <p>Elegí la moneda que vas a ingresar</p>
     </div>
+    <body>
+      <div>
+        <div id="accordion">
+          <div class="card2">
+            <div class="card-header" id="headingOne">
+              <button
+                class="btn"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                Pesos
+              </button>
+            </div>
+
+            <div
+              id="collapseOne"
+              class="collapse"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <app-deposit-pesos></app-deposit-pesos>
+              </div>
+            </div>
+          </div>
+          <div class="card2">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button
+                  class="btn"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Dolares
+                </button>
+              </h5>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <app-deposit-dolares></app-deposit-dolares>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
   </div>
 </div>

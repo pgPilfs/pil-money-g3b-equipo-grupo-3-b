@@ -32,6 +32,8 @@ import { HeaderComponent } from './header/header.component';
 import { LeftNavBarComponent } from './left-nav-bar/left-nav-bar.component';
 import { BankAccComponent } from './retiros/bank-acc/bank-acc.component';
 import { EfecPuntComponent } from './retiros/efec-punt/efec-punt.component';
+import { DepositPesosComponent } from './deposit/deposit-pesos/deposit-pesos.component';
+import { DepositDolaresComponent } from './deposit/deposit-dolares/deposit-dolares.component';
 import { StepperComponent } from './operations/transfer/stepper';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CdkStepperModule } from '@angular/cdk/stepper';
@@ -62,6 +64,8 @@ import { DepositComponent } from './deposit/deposit.component';
     LeftNavBarComponent,
     BankAccComponent,
     EfecPuntComponent,
+    DepositDolaresComponent,
+    DepositPesosComponent,
     StepperComponent,
     TipoCuentaPipe,
     DepositComponent,
