@@ -3,14 +3,6 @@ body {
   padding-left: 20%;
 }
 
-.slidenav {
-  background-color: #00b3a6;
-}
-
-.large {
-  grid-row-end: span 2;
-}
-
 .container {
   padding-top: 3%;
   display: grid;
@@ -19,39 +11,13 @@ body {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
 .container .box {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-}
-
-.account {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile_name {
-  font-weight: 600;
-  margin: 0 20px;
-  font-size: 15px;
-}
-
-.balance_text {
-  font-size: 15px;
-  color: #979797;
-}
-
-.amount {
-  font-weight: 600;
-  font-size: 36px;
 }
 
 @media (max-width: 1050px) {
