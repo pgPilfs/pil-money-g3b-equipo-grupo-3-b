@@ -2,108 +2,75 @@
 
 <div class="global-container">
   <div class="card register-form">
-    <mat-stepper lineargit  #stepper>
+    <mat-stepper #stepper>
       <mat-step>
         <h3 class="card-title">
           <span> Para crear tu cuenta necesitamos validar tus datos </span>
         </h3>
-        <p>
-          El proceso puede tomarte unos minutos. Recordá tener a mano tu DNI.
-        </p>
         <div class="form-button">
-          <button mat-button matStepperNext type="submit" class="btn btn-block">
+          <button matStepperNext type="submit" class="btn btn-block">
             Continuar
           </button>
         </div>
       </mat-step>
-      <mat-step>
-        <h3>Tus datos</h3>
-        <p>
-          Valida tus datos para que nadie pueda ingresar o crear una cuenta a tu
-          nombre
-        </p>
-        <button>Validar e-mail</button>
-        <button>Validar tu identidad</button>
-        <div class="form-button">
-          <button mat-button matStepperNext type="submit" class="btn btn-block">
-            Continuar
-          </button>
-        </div>
-      </mat-step>
+
       <mat-step required errorMessage="E-mail is required.">
-        <form >
+        <form>
           <h3>Ingresa tu e-mail</h3>
           <p>Te enviaremos un mensaje para confirmarlo.</p>
-          <section >
+          <section>
             <div>E-mail</div>
-            <input
-              class="input-email"
-              placeholder="Correo electronico"
-            />
+            <input class="input-email" placeholder="Correo electronico" />
           </section>
           <div class="form-button">
             <button
-              mat-button
               matStepperNext
               type="submit"
               class="btn btn-block"
               type="submit"
             >
-              Enviar mail de confirmación
+              Continuar
             </button>
           </div>
         </form>
       </mat-step>
+
       <mat-step>
-        <p>Ingresa el codigo que te enviamos por e-mail</p>
-
-        <input class="input-email" type="number" placeholder="Codigo" /> <br />
-        <div class="form-button">
-          <button mat-button matStepperNext type="submit" class="btn btn-block">
-            Confirmar código
-          </button>
-        </div>
-      </mat-step>
-
-      <mat-step errorMessage="Name is required.">
         <form>
-          <ng-template matStepLabel>Fill out your name</ng-template>
-          <section >
+          <section>
             <h3 class="card-title text-left">
-              <span> Elige un nombre de usuario y una contraseña </span>
+              Escriba su nombre de usuario y una contraseña
             </h3>
             <input
-              matInput
+              class="input-email"
               placeholder="Nombre de usuario"
-              formControlName="firstCtrl"
               required
             />
+            <input class="input-email" placeholder="Contraseña" required />
             <input
-              matInput
-              placeholder="Contraseña"
-              formControlName="firstCtrl"
-              required
-            />
-            <input
-              matInput
+              class="input-email"
               placeholder="Repetir contraseña"
-              formControlName="firstCtrl"
               required
             />
           </section>
-          <div>
-            <button mat-button matStepperPrevious>Continuar</button>
-            <button mat-button matStepperNext>Atrás</button>
+          <div class="form-button">
+            <button matStepperNext class="btn btn-block">Continuar</button>
           </div>
         </form>
       </mat-step>
+
       <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <p>Validamos tu información.</p>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
+        <form>
+          <h3 class="card-title">
+            <span
+              >Validamos tu información! <br />
+              Ya podes utilizar tu billetera.</span
+            >
+          </h3>
+          <div class="form-button">
+            <button class="btn btn-block">Comenzar</button>
+          </div>
+        </form>
       </mat-step>
     </mat-stepper>
   </div>
