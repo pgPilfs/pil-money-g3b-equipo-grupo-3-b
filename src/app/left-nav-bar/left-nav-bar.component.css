@@ -1,4 +1,5 @@
 
+
 .hidden {
   display: none;
 }
@@ -9,14 +10,15 @@ a {
   text-decoration: none;
 }
 
-nav {
+mat-nav-list {
   background-color: #00b3a6;
   color: white !important;
+  padding: 15%;
+  height: 100vh;
 }
 
-nav ul li {
-  padding-bottom: 10%;
-  padding-top: 10%;
+mat-nav-list li {
+  margin-bottom: 23%;
   list-style: none; /* quita los estilos por defecto de lista */
 }
 
@@ -27,7 +29,7 @@ a {
 
 .title {
   font-weight: 500;
-  margin-left: 20%;
+  margin-left: 15%;
   cursor: pointer;
 }
 

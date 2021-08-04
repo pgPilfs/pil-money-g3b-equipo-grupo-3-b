@@ -3,13 +3,6 @@ body {
   padding-left: 20%;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 230px 100px;
-  grid-gap: 30px;
-  background-color: #fff;
-}
-
 .slidenav {
   background-color: #00b3a6;
 }
@@ -62,16 +55,10 @@ body {
 }
 
 @media (max-width: 1050px) {
-  .container .box {
-    display: flex;
+  .container {
+    display: block;
   }
-  .large {
-    display: flex;
-  }
-  .slidenav {
-    padding: 0%;
-  }
-  .wrapper {
-    grid-template-columns: 100px 100px;
+  #bills{
+    display: none;
   }
 }
