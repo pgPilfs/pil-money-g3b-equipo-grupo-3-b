@@ -1,5 +1,6 @@
 body {
   background-color: #f0f0f0;
+  padding-left: 20%;
 }
 
 .wrapper {
@@ -9,9 +10,8 @@ body {
   background-color: #fff;
 }
 
-.slidenav{
-  background-color: #00B3A6;
-  padding: 10%;
+.slidenav {
+  background-color: #00b3a6;
 }
 
 .large {
@@ -20,7 +20,6 @@ body {
 
 .container {
   padding-top: 3%;
-  margin: 20px auto;
   display: grid;
   grid-template-columns: 500px 500px;
   grid-row: auto auto;
@@ -64,10 +63,15 @@ body {
 
 @media (max-width: 1050px) {
   .container .box {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-columns: 300px 300px;
+    display: flex;
   }
   .large {
-    display: none;
+    display: flex;
+  }
+  .slidenav {
+    padding: 0%;
+  }
+  .wrapper {
+    grid-template-columns: 100px 100px;
   }
 }

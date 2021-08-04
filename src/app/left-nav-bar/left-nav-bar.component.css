@@ -1,11 +1,22 @@
+
+.hidden {
+  display: none;
+}
+
+.buttons,
+a {
+  color: white;
+  text-decoration: none;
+}
+
 nav {
   background-color: #00b3a6;
   color: white !important;
 }
 
 nav ul li {
-  padding: 10%;
-  padding-right: 10%;
+  padding-bottom: 10%;
+  padding-top: 10%;
   list-style: none; /* quita los estilos por defecto de lista */
 }
 
@@ -18,4 +29,10 @@ a {
   font-weight: 500;
   margin-left: 20%;
   cursor: pointer;
+}
+
+@media (min-width: 1050px) {
+  .mat-sidenav-content {
+    display: none;
+  }
 }
