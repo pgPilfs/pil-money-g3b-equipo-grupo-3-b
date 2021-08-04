@@ -10,9 +10,46 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a
+        class="col px-md-3"
+        routerLink="/account"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Mi Cuenta</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/contact"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Contacto</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/faq"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Preguntas Frecuentes</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/register"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Registrarse</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/login"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Iniciar Sesion</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -26,13 +63,51 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>PIL-Money</span>
-      <div class="row buttons">
-        <a class="col px-md-3" routerLink="/account" routerLinkActive="active" mat-list-item href="#">Mi Cuenta</a>
-        <a class="col px-md-3" routerLink="/contact" routerLinkActive="active" mat-list-item href="#">Contacto</a>
-        <a class="col px-md-3" routerLink="/faq" routerLinkActive="active" mat-list-item href="#">Preguntas Frecuentes</a>
-        <a class="col px-md-3" routerLink="/register" routerLinkActive="active" mat-list-item href="#">Registrarse</a>
-        <a class="col px-md-3" routerLink="/login" routerLinkActive="active" mat-list-item href="#">Iniciar Sesion</a>
+      <span class="px-md-5">Waled</span>
+      <div
+        [ngClass]="{ hidden: (isHandset$ | async) === true }"
+        class="row buttons"
+      >
+        <a
+          class="col px-md-3"
+          routerLink="/account"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Mi Cuenta</a
+        >
+        <a
+          class="col px-md-3"
+          routerLink="/contact"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Contacto</a
+        >
+        <a
+          class="col px-md-3"
+          routerLink="/faq"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Preguntas Frecuentes</a
+        >
+        <a
+          class="col px-md-3"
+          routerLink="/register"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Registrarse</a
+        >
+        <a
+          class="col px-md-3"
+          routerLink="/login"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Iniciar Sesion</a
+        >
       </div>
     </mat-toolbar>
   </mat-sidenav-content>

@@ -2,66 +2,59 @@
   <div class="slidenav">
     <app-left-nav-bar></app-left-nav-bar>
   </div>
-  <div class="cuerpo">
-    <div id="titulo">Depositar</div>
-    <hr class="line" />
-    <div id="withdrawals">
-      <p>Elegí la moneda que vas a ingresar</p>
-    </div>
-    <body>
-      <div>
-        <div id="accordion">
-          <div class="card2">
-            <div class="card-header" id="headingOne">
-              <button
-                class="btn"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                Pesos
-              </button>
-            </div>
 
-            <div
-              id="collapseOne"
-              class="collapse"
-              aria-labelledby="headingOne"
-              data-parent="#accordion"
-            >
-              <div class="card-body">
-                <app-deposit-pesos></app-deposit-pesos>
-              </div>
-            </div>
-          </div>
-          <div class="card2">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button
-                  class="btn"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  Dolares
-                </button>
-              </h5>
-            </div>
-            <div
-              id="collapseTwo"
-              class="collapse"
-              aria-labelledby="headingTwo"
-              data-parent="#accordion"
-            >
-              <div class="card-body">
-                <app-deposit-dolares></app-deposit-dolares>
-              </div>
-            </div>
+  <div class="cuerpo">
+    <h3>Depositar</h3>
+    <hr />
+    <h4 style="font-weight: 300">Elegí la moneda que vas a ingresar</h4>
+
+    <body class="text-center">
+      <section class="text-center" id="headingOne">
+        <button
+          class="btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="false"
+          aria-controls="collapseOne"
+          style="color: #57c7fc"
+        >
+          ARS
+        </button>
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <app-deposit-pesos></app-deposit-pesos>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="text-center" id="headingTwo">
+        <button
+          class="btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+          style="color: #37a537"
+        >
+          USD
+        </button>
+
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <app-deposit-dolares></app-deposit-dolares>
+          </div>
+        </div>
+      </section>
     </body>
   </div>
 </div>
