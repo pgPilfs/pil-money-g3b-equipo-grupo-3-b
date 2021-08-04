@@ -40,6 +40,11 @@ import { CdkStepperModule } from '@angular/cdk/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
 import { DepositComponent } from './deposit/deposit.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -104,6 +109,11 @@ import { DepositComponent } from './deposit/deposit.component';
       { path: '', component: LandingComponent },
       { path: 'retiros', component: RetirosComponent },
     ]),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

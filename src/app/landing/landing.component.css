@@ -19,23 +19,17 @@ body {
 }
 
 h1 {
+  margin-bottom: 300px !important;
   position: absolute;
-  width: 480px;
-  height: 109px;
-  left: 105px;
-  top: 215px;
-  font-family: Roboto;
   font-style: normal;
   color: white;
   font-weight: bold;
-  font-size: 46.7463px;
-  line-height: 55px;
   text-transform: uppercase;
 }
 
 .cards {
   width: 80%;
-  padding-top: 25%;
+  padding-top: 15%;
   display: flex;
   position: absolute;
 }
@@ -54,8 +48,7 @@ h1 {
     display: none;
   }
   h1 {
-    font-size: 5px;
-
+    font-size: 15px;
     color: #000;
   }
   .cards {
