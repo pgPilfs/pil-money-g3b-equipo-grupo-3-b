@@ -3,11 +3,11 @@
 }
 
 mat-nav-list {
+  height: 100vh;
   background-color: #00b3a6;
   color: white !important;
   padding-top: 7%;
   padding-right: 15% !important;
-  height: 100vh;
 }
 
 mat-nav-list li {

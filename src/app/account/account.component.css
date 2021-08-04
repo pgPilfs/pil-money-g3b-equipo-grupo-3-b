@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  padding-top: 3%;
+  padding-top: 1%;
   display: grid;
   grid-template-columns: 500px 500px;
   grid-row: auto auto;
@@ -24,7 +24,10 @@ body {
   .container {
     display: block;
   }
-  #bills{
-    display: none;
+  #movements {
+    margin-top: 10%;
+  }
+  body{
+    padding-left: 0;
   }
 }
