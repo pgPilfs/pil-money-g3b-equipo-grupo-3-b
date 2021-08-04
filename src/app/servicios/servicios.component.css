@@ -1,15 +1,3 @@
-.wrapper {
-  display: grid;
-  grid-template-columns: 230px 100px;
-  grid-gap: 30px;
-  background-color: #fff;
-}
-
-.slidenav {
-  background-color: #00b3a6;
-  padding: 10%;
-}
-  
 .htiIbS {
   justify-self: start;
   align-items: normal;
@@ -31,4 +19,8 @@
   background-color: #b3d4fc;
   color: #000000;
   text-shadow: none;
+}
+
+body {
+  padding-left: 20%;
 }

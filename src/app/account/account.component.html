@@ -1,23 +1,13 @@
+<app-left-nav-bar></app-left-nav-bar>
 <body>
-  <div class="wrapper">
-    <div class="slidenav">
-      <app-left-nav-bar></app-left-nav-bar>
+  <div class="container">
+    <!-- Box A -->
+    <div class="box">
+      <app-balance></app-balance>
     </div>
-    <div class="site">
-      <div class="container">
-        <!-- Box A -->
-        <div class="box">
-          <app-balance></app-balance>
-        </div>
-        <!-- Box B -->
-        <div class="box large">
-          <app-movements></app-movements>
-        </div>
-        <!-- Box C -->
-        <div style="padding-top: 5%" class="box">
-          <app-facturas></app-facturas>
-        </div>
-      </div>
+    <!-- Box B -->
+    <div id="movements" class="box">
+      <app-movements></app-movements>
     </div>
   </div>
 </body>

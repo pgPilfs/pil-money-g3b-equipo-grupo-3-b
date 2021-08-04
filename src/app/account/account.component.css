@@ -1,32 +1,17 @@
 body {
   background-color: #f0f0f0;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 230px 100px;
-  grid-gap: 30px;
-  background-color: #fff;
-}
-
-.slidenav{
-  background-color: #00B3A6;
-  padding: 10%;
-}
-
-.large {
-  grid-row-end: span 2;
+  padding-left: 20%;
 }
 
 .container {
-  padding-top: 3%;
-  margin: 20px auto;
+  padding-top: 1%;
   display: grid;
   grid-template-columns: 500px 500px;
   grid-row: auto auto;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
 }
+
 .container .box {
   background-color: white;
   padding: 20px;
@@ -35,39 +20,14 @@ body {
   justify-content: center;
 }
 
-.account {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-}
-
-.profile_name {
-  font-weight: 600;
-  margin: 0 20px;
-  font-size: 15px;
-}
-
-.balance_text {
-  font-size: 15px;
-  color: #979797;
-}
-
-.amount {
-  font-weight: 600;
-  font-size: 36px;
-}
-
 @media (max-width: 1050px) {
-  .container .box {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-columns: 300px 300px;
+  .container {
+    display: block;
   }
-  .large {
-    display: none;
+  #movements {
+    margin-top: 10%;
+  }
+  body{
+    padding-left: 0;
   }
 }

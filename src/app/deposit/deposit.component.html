@@ -1,58 +1,54 @@
-<div class="wrapper">
-  <div class="slidenav">
-    <app-left-nav-bar></app-left-nav-bar>
-  </div>
+<app-left-nav-bar></app-left-nav-bar>
 
-  <div class="cuerpo">
-    <h3>Depositar</h3>
-    <hr />
-    <h4 style="font-weight: 300">Elegí la moneda que vas a ingresar</h4>
+<body class="cuerpo">
+  <h3>Depositar</h3>
+  <hr />
+  <h4 style="font-weight: 300">Elegí la moneda que vas a ingresar</h4>
 
-      <section id="headingOne">
-        <button
-          class="btn"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="false"
-          aria-controls="collapseOne"
-          style="color: #57c7fc"
-        >
-          ARS
-        </button>
-        <div
-          id="collapseOne"
-          class="collapse"
-          aria-labelledby="headingOne"
-          data-parent="#accordion"
-        >
-          <div class="card-body">
-            <app-deposit-pesos></app-deposit-pesos>
-          </div>
-        </div>
-      </section>
+  <section id="headingOne">
+    <button
+      class="btn"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseOne"
+      aria-expanded="false"
+      aria-controls="collapseOne"
+      style="color: #57c7fc"
+    >
+      ARS
+    </button>
+    <div
+      id="collapseOne"
+      class="collapse"
+      aria-labelledby="headingOne"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <app-deposit-pesos></app-deposit-pesos>
+      </div>
+    </div>
+  </section>
 
-      <section id="headingTwo">
-        <button
-          class="btn"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseTwo"
-          aria-expanded="false"
-          aria-controls="collapseTwo"
-          style="color: #37a537"
-        >
-          USD
-        </button>
+  <section id="headingTwo">
+    <button
+      class="btn"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseTwo"
+      aria-expanded="false"
+      aria-controls="collapseTwo"
+      style="color: #37a537"
+    >
+      USD
+    </button>
 
-        <div
-          id="collapseTwo"
-          class="collapse"
-          aria-labelledby="headingTwo"
-          data-parent="#accordion"
-        >
-          <div class="card-body">
-            <app-deposit-dolares></app-deposit-dolares>
-          </div>
-        </div>
-      </section>
-  </div>
-</div>
+    <div
+      id="collapseTwo"
+      class="collapse"
+      aria-labelledby="headingTwo"
+      data-parent="#accordion"
+    >
+      <div class="card-body">
+        <app-deposit-dolares></app-deposit-dolares>
+      </div>
+    </div>
+  </section>
+</body>

@@ -1,38 +1,66 @@
-<nav>
-  <h1 routerLink="/" routerLinkActive="active" class="title">{{ title }}</h1>
-  <ul>
-    <hr />
-    <li>
-      <a routerLink="/account" routerLinkActive="active">Cuentas</a>
-    </li>
-    <hr />
-    <li>
-      <a routerLink="/operations/transfer" routerLinkActive="active"
-        >Transferencias</a
+<mat-sidenav-container >
+  <mat-sidenav
+    #drawer
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-nav-list>
+      <h1 routerLink="/" routerLinkActive="active" class="title">Waled</h1>
+      <ul>
+        <hr />
+        <li>
+          <a routerLink="/account" routerLinkActive="active">Cuentas</a>
+        </li>
+        <hr />
+        <li>
+          <a routerLink="/operations/transfer" routerLinkActive="active"
+            >Transferencias</a
+          >
+        </li>
+        <li>
+          <a routerLink="/retiros" routerLinkActive="active">Extracciones</a>
+        </li>
+        <li>
+          <a routerLink="/deposit" routerLinkActive="active"
+            >Depositar dinero</a
+          >
+        </li>
+        <li>
+          <a routerLink="/services" routerLinkActive="active"
+            >Pago de servicios</a
+          >
+        </li>
+        <li>
+          <a routerLink="/operations/action" routerLinkActive="active"
+            >Compra y venta de dolares</a
+          >
+        </li>
+        <hr />
+        <li>
+          <a routerLink="/faq" routerLinkActive="active"
+            >Preguntas Frecuentes</a
+          >
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="active">Contacto</a>
+        </li>
+      </ul>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
       >
-    </li>
-    <li>
-      <a routerLink="/retiros" routerLinkActive="active"
-        >Extracciones</a
-      >
-    </li>
-    <li>
-      <a routerLink="/deposit" routerLinkActive="active">Depositar dinero</a>
-    </li>
-    <li>
-      <a routerLink="/services" routerLinkActive="active">Pago de servicios</a>
-    </li>
-    <li>
-      <a routerLink="/operations/action" routerLinkActive="active"
-        >Compra y venta de dolares</a
-      >
-    </li>
-    <hr />
-    <li>
-      <a routerLink="/faq" routerLinkActive="active">Preguntas Frecuentes</a>
-    </li>
-    <li>
-      <a routerLink="/contact" routerLinkActive="active">Contacto</a>
-    </li>
-  </ul>
-</nav>
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="px-md-5">Waled</span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>

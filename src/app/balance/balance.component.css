@@ -8,10 +8,6 @@
   justify-content: center;
 }
 
-.balance {
-  margin: 20px 0;
-}
-
 .balance_text {
   font-size: 15px;
   color: #979797;
@@ -23,20 +19,30 @@
 }
 
 .card_button {
-  padding-left: 5%;
+  display: flex;
 }
 .buttons {
+  margin: 10px;
   background: #f2e7fe;
   font-size: 18px;
   border-radius: 10px;
-  padding: 4%;
-  margin-left: 7%;
-  -webkit-appearance:initial;
-  -webkit-appearance: inherit;  
+  padding: 3%;
+  -webkit-appearance: initial;
+  -webkit-appearance: inherit;
   border: none;
 }
-.card_information {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+@media only screen and (min-width: 1040px) {
+  .card_button {
+    text-align: center;
+  }
+  .buttons {
+    background: #f2e7fe;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-left: 10%;
+    -webkit-appearance: initial;
+    -webkit-appearance: inherit;
+    border: none;
+  }
 }
