@@ -1,25 +1,20 @@
+nav {
+  background-color: #00b3a6;
+  color: white !important;
+}
+
+nav ul li {
+  padding: 10%;
+  padding-right: 10%;
+  list-style: none; /* quita los estilos por defecto de lista */
+}
+
 a {
   text-decoration: none;
   color: white !important;
 }
 
-nav {
-  background-color: #00b3a6;
-  padding: 10%;
-}
-
-nav ul li {
-  text-align: left;
-  padding: 15px 10px;
-  list-style: none; /* quita los estilos por defecto de lista */
-}
-
-hr {
-  color: white;
-}
 .title {
-  font-family: Roboto;
-  color: white;
   font-weight: 500;
   margin-left: 20%;
   cursor: pointer;

@@ -3,25 +3,58 @@
     <app-left-nav-bar></app-left-nav-bar>
   </div>
 
-  <div>
-    <h1>Despositar</h1>
-    <p>Elegí la moneda que vas a ingresar</p>
-    <p>Pesos</p>
-    <p>Dolar</p>
+  <div class="cuerpo">
+    <h3>Depositar</h3>
+    <hr />
+    <h4 style="font-weight: 300">Elegí la moneda que vas a ingresar</h4>
 
-    <p>Ingresa dinero a tu cuenta</p>
-    <p>
-      Para ingresar pesos debes realizar una trasnerencia a la siguiente cuenta:
-    </p>
-    <p>Podés ingresar hasta 50.000 ARS ¿Cómo funcionan los limites?</p>
-    <div>
-      <p>Razon social: WALLET TRADE SRL</p>
-      <p>CUIT: 123456789</p>
-      <p>Banco: Banco nNdustrial SA Sucursal 1</p>
-      <p>Cuenta corriente 1-2346789/10</p>
+    <body class="text-center">
+      <section class="text-center" id="headingOne">
+        <button
+          class="btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="false"
+          aria-controls="collapseOne"
+          style="color: #57c7fc"
+        >
+          ARS
+        </button>
+        <div
+          id="collapseOne"
+          class="collapse"
+          aria-labelledby="headingOne"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <app-deposit-pesos></app-deposit-pesos>
+          </div>
+        </div>
+      </section>
 
-      <p>CBU: 123456789013245676890</p>
-      <p>ALIAS: WALLET.ARS</p>
-    </div>
+      <section class="text-center" id="headingTwo">
+        <button
+          class="btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseTwo"
+          aria-expanded="false"
+          aria-controls="collapseTwo"
+          style="color: #37a537"
+        >
+          USD
+        </button>
+
+        <div
+          id="collapseTwo"
+          class="collapse"
+          aria-labelledby="headingTwo"
+          data-parent="#accordion"
+        >
+          <div class="card-body">
+            <app-deposit-dolares></app-deposit-dolares>
+          </div>
+        </div>
+      </section>
+    </body>
   </div>
 </div>

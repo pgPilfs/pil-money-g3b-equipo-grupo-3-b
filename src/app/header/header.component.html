@@ -1,51 +1,114 @@
-<nav class="navbar navbar-expand-lg">
-    <a class="name navbar-brand" routerLink="/" routerLinkActive="active">
-      Waled
-    </a>
-    <button
-      class="navbar-toggler"
-      style="background-color: rgb(122, 122, 122)"
-      type="button"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div
-      class="ml-1 collapse navbar-collapse mr-auto"
-
-    >
-      <ul class="navbar-nav mr-auto">
+<mat-sidenav-container>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+    [ngClass]="{ hidden: (isHandset$ | async) === false }"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a
+        class="col px-md-3"
+        routerLink="/account"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Mi Cuenta</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/contact"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Contacto</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/faq"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Preguntas Frecuentes</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/register"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Registrarse</a
+      >
+      <a
+        class="col px-md-3"
+        routerLink="/login"
+        routerLinkActive="active"
+        mat-list-item
+        href="#"
+        >Iniciar Sesion</a
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="px-md-5">Waled</span>
+      <div
+        [ngClass]="{ hidden: (isHandset$ | async) === true }"
+        class="row buttons"
+      >
         <a
-          class="btn btn-light nav-link"
+          class="col px-md-3"
           routerLink="/account"
           routerLinkActive="active"
-          >Mi cuenta</a
+          mat-list-item
+          href="#"
+          >Mi Cuenta</a
         >
-  
         <a
-          class="btn btn-light nav-link"
+          class="col px-md-3"
           routerLink="/contact"
           routerLinkActive="active"
+          mat-list-item
+          href="#"
           >Contacto</a
         >
         <a
-          class="btn btn-light nav-link"
+          class="col px-md-3"
           routerLink="/faq"
           routerLinkActive="active"
+          mat-list-item
+          href="#"
           >Preguntas Frecuentes</a
         >
         <a
-          class="btn btn-light nav-link"
-          routerLink="/login"
-          routerLinkActive="active"
-          >Iniciar Sesión</a
-        >
-        <a
-          style="color: white"
-          class="btn btn-primary nav-link"
+          class="col px-md-3"
           routerLink="/register"
           routerLinkActive="active"
-          >Crea tu cuenta</a
+          mat-list-item
+          href="#"
+          >Registrarse</a
         >
-      </ul>
-    </div>
-  </nav>
+        <a
+          class="col px-md-3"
+          routerLink="/login"
+          routerLinkActive="active"
+          mat-list-item
+          href="#"
+          >Iniciar Sesion</a
+        >
+      </div>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
