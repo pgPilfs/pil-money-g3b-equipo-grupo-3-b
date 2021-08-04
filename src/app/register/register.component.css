@@ -9,18 +9,6 @@
   position: relative;
 }
 
-.global-container h3 {
-  font-weight: 500;
-}
-
-.card-title {
-  font-weight: 300;
-}
-
-.card {
-  border: none;
-}
-
 .register-form {
   width: 480px;
   margin: 20px;
@@ -35,28 +23,10 @@
 }
 .card-title {
   font-weight: 300;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
   font-size: 22px;
   line-height: 21px;
   text-align: center;
   padding-top: 4%;
-}
-
-p {
-  width: 324px;
-  height: 42px;
-  left: 556px;
-  top: 480px;
-
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 21px;
-  padding-top: 4%;
-  text-align: center;
 }
 
 form {
@@ -79,8 +49,6 @@ button {
 
 .form-button {
   padding-top: 25px;
-  align-items: center;
-  padding-left: 15px;
 }
 
 .input-email {
@@ -93,5 +61,14 @@ button {
 }
 
 .text-left {
-  text-align:left !important
+  text-align: left !important;
+}
+
+@media screen and (max-width: 1040px) {
+  .register-form{
+    border-radius: 0;
+  }
+  button{
+    width: 200px;
+  }
 }
