@@ -104,7 +104,7 @@ body {
   }
   .nxt-button {
     position: relative;
-    margin-left: 4%;
+    left: 25px;
   }
 }
 
@@ -118,7 +118,7 @@ body {
   }
   .nxt-button {
     position: relative;
-    margin-left: 4%;  
+    left: 3px;  
   }
   
 }
