@@ -45,6 +45,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { AmountretirComponent } from './retiros/amountretir/amountretir.component';
+import { SuccessComponent } from './retiros/success/success.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +76,8 @@ import { MatListModule } from '@angular/material/list';
     StepperComponent,
     TipoCuentaPipe,
     DepositComponent,
+    AmountretirComponent,
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,7 +101,8 @@ import { MatListModule } from '@angular/material/list';
           { path: 'action', component: ActionComponent },
         ],
       },
-      { path: 'retiros', component: RetirosComponent },
+      { path: 'retiros', component: RetirosComponent,
+      },
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'register', component: RegisterComponent },
@@ -107,7 +112,8 @@ import { MatListModule } from '@angular/material/list';
       { path: 'services', component: ServiciosComponent },
       { path: 'faq', component: FaqComponent },
       { path: '', component: LandingComponent },
-      { path: 'retiros', component: RetirosComponent },
+      { path: 'retiros/amountretir', component: AmountretirComponent },
+      { path: 'retiros/success', component: SuccessComponent },
     ]),
     LayoutModule,
     MatToolbarModule,
