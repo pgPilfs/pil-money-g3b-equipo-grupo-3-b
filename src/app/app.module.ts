@@ -42,6 +42,9 @@ import { AmountretirComponent } from './retiros/amountretir/amountretir.componen
 import { SuccessComponent } from './retiros/success/success.component';
 import { ActionService } from './operations/action/action.service';
 import { ActionComponent, FilterActionPipe } from './operations/action/action.component';
+import { QuoteComponent } from './quote/quote.component';
+import { CotizaciónService } from './quote/quote.service';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -73,6 +76,7 @@ import { ActionComponent, FilterActionPipe } from './operations/action/action.co
     DepositComponent,
     AmountretirComponent,
     SuccessComponent,
+    QuoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -84,6 +88,8 @@ import { ActionComponent, FilterActionPipe } from './operations/action/action.co
     ReactiveFormsModule,
     CdkStepperModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     NgxMaskModule.forRoot(),
     MatDialogModule,
     RouterModule.forRoot([
@@ -109,6 +115,7 @@ import { ActionComponent, FilterActionPipe } from './operations/action/action.co
       { path: '', component: LandingComponent },
       { path: 'retiros/amountretir', component: AmountretirComponent },
       { path: 'retiros/success', component: SuccessComponent },
+      { path: 'quote', component: QuoteComponent}
     ]),
     LayoutModule,
     MatToolbarModule,
@@ -116,7 +123,7 @@ import { ActionComponent, FilterActionPipe } from './operations/action/action.co
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [ActionService],
+  providers: [ActionService, CotizaciónService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
