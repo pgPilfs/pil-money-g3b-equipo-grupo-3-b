@@ -1,118 +1,68 @@
-<div class="container-fluid col-auto">
-  <div class="card">
-    <div class="card-header">Movimiento de operaciones en dólares</div>
+<div class="card p-3 shadow-sm">
     <div class="card-body">
+      <h3>Movimiento de operaciones</h3>
+      <hr />
+      <form [formGroup]="formgroup">  
+      <div class="col-3 float-end" style="margin-top: 2em">
+        <select class="form-select" id="cuenta" formControlName="cuenta">
+          <option [ngValue]="cuenta" *ngFor="let cuenta of cuentas">
+            {{ cuenta.tipo }} {{ cuenta.moneda.simbolo }} {{ cuenta.id | mask: "0000000-0 000-0" }}
+          </option>
+        </select>
+      </div>
       <div class="row mb-4">
-        <div class="col-3">
-          <label for="desde" class="form-label">Desde</label>
-          <input
-            type="date"
-            id="desde"
-            class="form-control"
-            min="2000-01-01"
-            max="2100-01-01"
-          />
-        </div>
-        <div class="col-3">
-          <label for="hasta" class="form-label">Hasta</label>
-          <input
-            type="date"
-            id="hasta"
-            class="form-control"
-            min="2000-01-01"
-            max="2100-01-01"
-          />
-        </div>
-        <div class="col align-self-end">
-          <div class="btn-group" id="test">
-            <button type="button" class="btn btn-outline-dark">Hoy</button>
-            <button type="button" class="btn btn-outline-dark">Mes</button>
-            <button type="button" class="btn btn-outline-dark">
-              Trimestre
-            </button>
-          </div>
-          <div class="card-body">
-            <div class="col-3 float-end" style="margin-top: 2em;">
-                <select class="form-select" id="cuenta">
-                    <option [value]="null" hidden selected>Cuenta</option>
-                </select>
+            <div class="col-3">
+                <label for="desde" class="form-label">Desde</label>
+                <input type="date" id="desde" class="form-control" min="2000-01-01" max="2100-01-01" formControlName="desde" (change)="FechaChange($event)"/>
             </div>
-            <div class="row mb-4">
-                <div class="col-3">
-                    <label for="desde" class="form-label">Desde</label>
-                    <input type="date" id="desde" class="form-control" min="2000-01-01" max="2100-01-01">
-                </div>
-                <div class="col-3">
-                    <label for="hasta" class="form-label">Hasta</label>
-                    <input type="date" id="hasta" class="form-control" min="2000-01-01" max="2100-01-01">
-                </div>
-                <div class="col align-self-end">
-                    <div class="btn-group" id="test">
-                        <input type="radio" class="btn-check" name="filter" id="hoy">
-                        <label class="btn btn-outline-dark" for="hoy">Hoy</label>
-                        <input type="radio" class="btn-check" name="filter" id="mes">
-                        <label class="btn btn-outline-dark" for="mes">Mes</label>
-                        <input type="radio" class="btn-check" name="filter" id="trimestre">
-                        <label class="btn btn-outline-dark" for="trimestre">Trimestre</label>
-                    </div>
+            <div class="col-3">
+                <label for="hasta" class="form-label">Hasta</label>
+                <input type="date" id="hasta" class="form-control" min="2000-01-01" max="2100-01-01" formControlName="hasta" (change)="FechaChange($event)"/>
+            </div>
+            <div class="col align-self-end">
+                <div class="btn-group">
+
+                <input type="radio" class="btn-check" name="tiempo" id="hoy" value="hoy" formControlName="tiempo" (change)="TiempoChange($event)"/>
+                <label class="btn btn-outline-dark" for="hoy">Hoy</label>
+
+                <input type="radio" class="btn-check" name="tiempo" id="mes" value="mes" formControlName="tiempo" (change)="TiempoChange($event)"/>
+                <label class="btn btn-outline-dark" for="mes">Mes</label>
+
+                <input type="radio" class="btn-check" name="tiempo" id="trimestre" value="trimestre" formControlName="tiempo" (change)="TiempoChange($event)"/>
+                <label class="btn btn-outline-dark" for="trimestre" >Trimestre</label>
+              
                 </div>
             </div>
-            <table class="table align-middle table-hover mb-4">
-                <thead>
-                    <tr>
-                        <th width="15%">Fecha</th>
-                        <th width="auto">Concepto</th>
-                        <th width="15%">Crédito</th>
-                        <th width="15%">Débito</th>
-                        <th width="15%">Saldo U$D</th>
-                      </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>05/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 500</td>
-                        <td>$ 3000</td>
-                    </tr>
-                    <tr>
-                        <td>04/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 3000</td>
-                        <td>$ 3500</td>
-                    </tr>
-                    <tr>
-                        <td>03/01/21</td>
-                        <td></td>
-                        <td>$ 2000</td>
-                        <td></td>
-                        <td>$ 6500</td>
-                    </tr>
-                    <tr>
-                        <td>02/01/21</td>
-                        <td></td>
-                        <td></td>
-                        <td>$ 500</td>
-                        <td>$ 4500</td>
-                    </tr>
-                    <tr>
-                        <td>01/01/21</td>
-                        <td></td>
-                        <td>$ 5000</td>
-                        <td></td>
-                        <td>$ 5000</td>
-                    </tr>
-                </tbody>
-            </table>
-            <nav>
-                <ul class="pagination justify-content-end">
-                  <li class="page-item"><a class="page-link"><span>&laquo;</span></a></li>
-                  <li class="page-item"><a class="page-link">1</a></li>
-                  <li class="page-item"><a class="page-link">2</a></li>
-                  <li class="page-item"><a class="page-link">3</a></li>
-                  <li class="page-item"><a class="page-link"><span>&raquo;</span></a></li>
-                </ul>
-              </nav>
-          </div>
-    
+          
+        </div>
+    </form>
+      <table class="table align-middle table-hover mb-4">
+        <thead>
+          <tr>
+            <th width="15%">Fecha</th>
+            <th width="auto">Concepto</th>
+            <th width="15%">Crédito</th>
+            <th width="15%">Débito</th>
+            <th width="15%">Saldo {{cuenta.moneda?.simbolo}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let action of sa.getActions | filtro: {id: cuenta.id, status: formgroup.status, value: formgroup.value}">
+            <td>{{ action.fecha | date: 'dd/MM/yyyy' }}</td>
+            <td>{{ action.desc }}</td>
+            <ng-template [ngIf]="action.tipo.id != 3" [ngIfElse]="debito">
+              <td>{{ action.monto  | currency: "- " }}</td>
+              <td></td> 
+            </ng-template>
+            <ng-template #debito>
+              <td></td>
+              <td>{{ action.monto  | currency: " " }}</td>
+            </ng-template>
+            <td>{{ action.saldo | currency: " " }}</td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
+  </div>
+
+

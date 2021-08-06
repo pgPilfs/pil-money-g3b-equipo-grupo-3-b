@@ -1,16 +1,21 @@
 thead > tr > th {
-    text-align: center;
-    font-weight: normal;
+  text-align: center;
+  font-weight: normal;
 }
 
 tbody > tr > td {
-    text-align: center;
+  text-align: center;
 }
 
 tbody > tr > td:nth-child(2) {
-  text-align: left;
+text-align: left;
 }
 
 a {
-  color: #212529;
+color: #212529;
 }
+
+form{
+border-radius: 10px;
+}
+

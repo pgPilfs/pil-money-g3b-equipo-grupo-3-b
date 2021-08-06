@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {
-  BrowserAnimationsModule,
-  NoopAnimationsModule,
-} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -19,11 +16,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { OperationsComponent } from './operations/operations.component';
 import { ExchangeComponent } from './operations/exchange/exchange.component';
-import { ActionComponent } from './operations/action/action.component';
-import {
-  TipoCuentaPipe,
-  TransferComponent,
-} from './operations/transfer/transfer.component';
+import { TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
@@ -47,6 +40,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { AmountretirComponent } from './retiros/amountretir/amountretir.component';
 import { SuccessComponent } from './retiros/success/success.component';
+import { ActionService } from './operations/action/action.service';
+import { ActionComponent, FilterActionPipe } from './operations/action/action.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +59,7 @@ import { SuccessComponent } from './retiros/success/success.component';
     OperationsComponent,
     ExchangeComponent,
     ActionComponent,
+    FilterActionPipe,
     TransferComponent,
     RetirosComponent,
     FacturasComponent,
@@ -74,7 +70,6 @@ import { SuccessComponent } from './retiros/success/success.component';
     DepositDolaresComponent,
     DepositPesosComponent,
     StepperComponent,
-    TipoCuentaPipe,
     DepositComponent,
     AmountretirComponent,
     SuccessComponent,
@@ -121,7 +116,7 @@ import { SuccessComponent } from './retiros/success/success.component';
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [ActionService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
