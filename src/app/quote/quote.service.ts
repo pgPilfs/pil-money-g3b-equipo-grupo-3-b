@@ -13,7 +13,7 @@ export class CotizaciónService {
         const dolar = this.http.get("api/dolaroficial");
         const variacion = this.http.get("api/all")
         .pipe(pluck("valores","valores_principales","casa349", "variacion"),
-              map((res : any) => <number>res._text));
+              map((res : any) => <number>res._text.replace(",",".")));
 
         return zip(dolar, variacion);
     }
