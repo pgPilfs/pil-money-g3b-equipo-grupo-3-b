@@ -46,6 +46,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { CotizaciónService } from './quote/quote.service';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
     DepositComponent,
     AmountretirComponent,
     SuccessComponent,
-    QuoteComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

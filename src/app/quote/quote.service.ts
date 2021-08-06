@@ -1,20 +1,24 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { pluck, map, finalize } from "rxjs/operators";
+import { zip } from "rxjs";
+import { concatMap, finalize, map, mergeMap, pluck } from "rxjs/operators";
 
 @Injectable()
 export class CotizaciónService {
 
-    process : boolean = true;
-   
     constructor(private http: HttpClient) { }
 
-    getDataTest(){
-               
-        return this.http.get("api/all").pipe(
-            finalize(() => this.process = false),
-            pluck("valores","cotizador"),
-            map((datas : any) => Object.values(datas)))
-        }
-       
+    getDolar(){
+
+        const dolar = this.http.get("api/dolaroficial");
+        const variacion = this.http.get("api/all")
+        .pipe(pluck("valores","valores_principales","casa349", "variacion"),
+              map((res : any) => <number>res._text));
+
+        return zip(dolar, variacion);
+    }
+
 }
+
+
+
