@@ -14,3 +14,7 @@ select {
 textarea {
   height: 100%;
 }
+
+body {
+  padding-left: 20%;
+}

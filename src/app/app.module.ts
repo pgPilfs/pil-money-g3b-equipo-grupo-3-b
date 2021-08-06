@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {
-  BrowserAnimationsModule,
-  NoopAnimationsModule,
-} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
@@ -19,11 +16,7 @@ import { LandingComponent } from './landing/landing.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { OperationsComponent } from './operations/operations.component';
 import { ExchangeComponent } from './operations/exchange/exchange.component';
-import { ActionComponent } from './operations/action/action.component';
-import {
-  TipoCuentaPipe,
-  TransferComponent,
-} from './operations/transfer/transfer.component';
+import { TransferComponent } from './operations/transfer/transfer.component';
 import { RetirosComponent } from './retiros/retiros.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
@@ -45,6 +38,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { AmountretirComponent } from './retiros/amountretir/amountretir.component';
+import { SuccessComponent } from './retiros/success/success.component';
+import { ActionService } from './operations/action/action.service';
+import { ActionComponent, FilterActionPipe } from './operations/action/action.component';
+import { QuoteComponent } from './quote/quote.component';
+import { CotizaciónService } from './quote/quote.service';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -62,6 +62,7 @@ import { MatListModule } from '@angular/material/list';
     OperationsComponent,
     ExchangeComponent,
     ActionComponent,
+    FilterActionPipe,
     TransferComponent,
     RetirosComponent,
     FacturasComponent,
@@ -72,8 +73,10 @@ import { MatListModule } from '@angular/material/list';
     DepositDolaresComponent,
     DepositPesosComponent,
     StepperComponent,
-    TipoCuentaPipe,
     DepositComponent,
+    AmountretirComponent,
+    SuccessComponent,
+    QuoteComponent,
   ],
   imports: [
     BrowserModule,
@@ -85,6 +88,8 @@ import { MatListModule } from '@angular/material/list';
     ReactiveFormsModule,
     CdkStepperModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     NgxMaskModule.forRoot(),
     MatDialogModule,
     RouterModule.forRoot([
@@ -97,7 +102,8 @@ import { MatListModule } from '@angular/material/list';
           { path: 'action', component: ActionComponent },
         ],
       },
-      { path: 'retiros', component: RetirosComponent },
+      { path: 'retiros', component: RetirosComponent,
+      },
       { path: 'register', component: RegisterComponent },
       { path: 'account', component: AccountComponent },
       { path: 'register', component: RegisterComponent },
@@ -107,7 +113,9 @@ import { MatListModule } from '@angular/material/list';
       { path: 'services', component: ServiciosComponent },
       { path: 'faq', component: FaqComponent },
       { path: '', component: LandingComponent },
-      { path: 'retiros', component: RetirosComponent },
+      { path: 'retiros/amountretir', component: AmountretirComponent },
+      { path: 'retiros/success', component: SuccessComponent },
+      { path: 'quote', component: QuoteComponent}
     ]),
     LayoutModule,
     MatToolbarModule,
@@ -115,7 +123,7 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [ActionService, CotizaciónService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

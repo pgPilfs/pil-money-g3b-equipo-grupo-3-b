@@ -6,7 +6,7 @@ abstract class Cuenta{
     private contacto : Contacto;
     private saldo : number;
     private moneda : Moneda;
-
+     
     constructor(id : string, contacto : Contacto, saldo : number, moneda? : Moneda){
      
         this.id = id;
@@ -25,7 +25,7 @@ abstract class Cuenta{
     get Id(): string {
         return this.id;
     }
-
+ 
     get Contacto(): Contacto {
         return this.contacto;
     }
@@ -37,10 +37,10 @@ abstract class Cuenta{
     get Saldo(): number {
         return this.saldo;
     }
+
     set Saldo(value: number) {
         this.saldo = value;
     }
-    
 
 }
 

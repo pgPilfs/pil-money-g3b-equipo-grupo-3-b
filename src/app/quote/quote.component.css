@@ -1,0 +1,30 @@
+form{
+    border-radius: 10px;
+    min-height: 470px;
+}
+
+thead{
+    font-size: smaller;
+}
+
+thead > tr > td:nth-child(1){
+    text-align:  left;
+}
+
+thead > tr > td{
+    text-align: center;
+    border-bottom: 0px;
+}
+
+tbody > tr > td:nth-child(1){
+    text-align:  left;
+}
+
+tbody > tr > td{
+    text-align:  center;
+}
+
+#spinner{
+    width: 25px;
+    height: 25px;
+}

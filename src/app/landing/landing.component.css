@@ -28,8 +28,9 @@ h1 {
 }
 
 .cards {
-  width: 80%;
+  width: 70%;
   padding-top: 15%;
+  left: 12%; /*centré un poco las cards, pero luego hay que ajustarlo bien calculo.*/
   display: flex;
   position: absolute;
 }
