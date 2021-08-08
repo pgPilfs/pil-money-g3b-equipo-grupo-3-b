@@ -11,10 +11,32 @@ select {
   padding: 12px;
 }
 
-textarea {
-  height: 100%;
-}
-
 body {
   padding-left: 20%;
+}
+
+#contenedor{
+  padding-top: 10px;
+}
+
+.f1 > .row > label {
+  width: 80px;
+}
+
+.f2 > .row > label {
+  width: 115px;
+}
+
+button{
+  width: 10em;
+}
+
+@media (min-width: 960px) { 
+
+  #contenedor{
+    padding-left: 235px;
+    padding-top: 50px;
+    width: 900px;
+  }
+
 }

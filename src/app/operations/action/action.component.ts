@@ -82,7 +82,7 @@ export class FilterActionPipe implements PipeTransform {
       return items.filter(item => moment(item.fecha).isBetween(desde, hasta));
 
     }
-    else if(filter.value.desde || filter.value.desde){
+    else if(filter.value.desde || filter.value.hasta){
       return null;
     }
     else{
