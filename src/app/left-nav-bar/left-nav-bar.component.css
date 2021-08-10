@@ -17,8 +17,11 @@ mat-nav-list li {
 }
 
 .title {
+  width: 15vh;
+  height: 8vh;
+  filter: drop-shadow(3px 3px 0.05rem rgb(186, 34, 206));
   font-weight: 500;
-  margin-left: 25%;
+  margin-left: 10%;
   padding-top: 5%;
   cursor: pointer;
 }
