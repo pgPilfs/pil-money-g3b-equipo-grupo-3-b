@@ -1,5 +1,6 @@
 .sidenav {
   width: 200px;
+
 }
 
 .sidenav .mat-toolbar {
@@ -12,6 +13,10 @@
   z-index: 1;
 }
 
+.mat-toolbar{
+  background-color: transparent !important;
+  
+}
 .hidden {
   display: none;
 }
@@ -20,4 +25,17 @@
   padding-left: 30%;
   color: white;
   text-decoration: none;
+}
+
+img{
+  width: 9%;
+  margin-left: 3%
+}
+
+@media only screen and (max-width: 1040px) {
+  img{
+    width: 30%;
+    margin-top:3%;
+    margin-left: 3%
+  }
 }
