@@ -10,6 +10,7 @@
 .background_image {
   position: relative;
   background-image: url(../../assets/background-picture.png);
+  background-size: cover;
 }
 
 .title,
