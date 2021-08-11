@@ -13,7 +13,7 @@
             </button>
           </div>
         </mat-step>
-  
+
         <mat-step required errorMessage="E-mail is required.">
           <form>
             <h3 class="card-title">
@@ -36,18 +36,24 @@
             </div>
           </form>
         </mat-step>
-  
+
         <mat-step>
           <form>
             <section>
-              <h3 class="card-title text-left">
-                Escriba su nombre de usuario y una contraseña
-              </h3>
-              <input
-                class="input-email"
-                placeholder="Nombre de usuario"
-                required
-              />
+              <h3 class="card-title text-left">Escriba su nombre y apellido</h3>
+              <input class="input-email" placeholder="Nombre" required />
+              <input class="input-email" placeholder="Apellido" required />
+            </section>
+            <div class="form-button">
+              <button matStepperNext class="btn btn-block">Continuar</button>
+            </div>
+          </form>
+        </mat-step>
+
+        <mat-step>
+          <form>
+            <section>
+              <h3 class="card-title text-left">Escriba una contraseña</h3>
               <input class="input-email" placeholder="Contraseña" required />
               <input
                 class="input-email"
@@ -60,7 +66,7 @@
             </div>
           </form>
         </mat-step>
-  
+
         <mat-step>
           <form>
             <h3 class="card-title">
@@ -77,5 +83,4 @@
       </mat-stepper>
     </div>
   </div>
-  
 </div>
