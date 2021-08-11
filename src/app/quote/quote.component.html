@@ -1,26 +1,26 @@
-<div class="container-fluid col-6">
-    <form class="card p-3 shadow-sm">
-      <div class="card-body">
-        <div *ngIf="this.sc.process" id="spinner" class="spinner-grow spinner-grow-sm float-end m-2"></div>
+<div class="container-fluid col-3">
+    <form class="card pt-3 px-3 shadow-sm">
+      <div class="card-body pb-0">
+        <div *ngIf="await" id="spinner" class="spinner-grow spinner-grow-sm float-end m-2"></div>
         <h3>Cotización</h3>
         <hr />
         <table class="table">
+          <caption *ngIf="!await" class="small">ACTUALIZADO: {{ dolar?.fecha | date:"dd/MM/yyyy HH:mm" }}</caption>
           <thead>
-            <tr>
-              <td>Moneda</td>
-              <td>Compra</td>
-              <td>Venta</td>
+            <tr class="fw-light">
+              <td>MONEDA</td>
+              <td>COMPRA</td>
+              <td>VENTA</td>
             </tr>
           </thead>
-         
-          <tbody *ngIf="!this.sc.process">
-            <tr *ngFor="let item of ejemplo">
-              <td>{{ item.nombre._text }}</td>
-              <td>{{ item.compra._text }}</td>
-              <td>{{ item.venta._text }}</td>
+          <tbody *ngIf="!await">
+            <tr>
+                <td>Dolar Oficial <span class="small fw-lighter">({{ variacion > 0.00 ? "+" : "-" }}{{ variacion }}%)</span></td>
+                <td>{{ dolar?.compra }}</td>
+                <td>{{ dolar?.venta }}</td>
             </tr>
           </tbody>
-       </table>
-      </div>
-    </form>
+        </table>
+    </div>
+   </form>
   </div>

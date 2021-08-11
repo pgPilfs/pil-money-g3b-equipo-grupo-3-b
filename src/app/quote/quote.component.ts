@@ -4,19 +4,24 @@ import { CotizaciónService } from './quote.service';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
-  styleUrls: ['./quote.component.css']
+  styleUrls: ['./quote.component.css'],
 })
 export class QuoteComponent implements OnInit {
+  
+  dolar: any;
+  variacion: number;
+  await : boolean = true;
 
-  public ejemplo : any[] | undefined;
+  constructor(public sc: CotizaciónService) {
+    
+    sc.getDolar().subscribe(
+      (data) => { this.dolar = data[0], this.variacion = data[1] },
+      (error) => { console.log(error) })
+      .add(() => {
+       this.await = false;
+   });
 
-  constructor(public sc : CotizaciónService) {
-
-    this.sc.getDataTest().subscribe(data => this.ejemplo = data);
-
-   }
-
-  ngOnInit(): void {
   }
 
+  ngOnInit(): void {}
 }

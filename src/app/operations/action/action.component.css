@@ -19,3 +19,53 @@ form{
 border-radius: 10px;
 }
 
+#contenedor{
+  padding-top: 10px;
+}
+
+@media (min-width: 960px) { 
+
+  #contenedor{
+    padding-top: 50px;
+    padding-left: 235px;
+    width: 1300px;
+  }
+
+}
+
+@media (max-width: 360px) { 
+
+  #nav-filter, #nav-cuenta{
+    margin-top: 5px
+    
+  }
+
+  #nav-cuenta{
+    margin-top: 2em
+  }
+
+
+}
+
+@media (min-width: 700px) { 
+
+  #nav-filter{
+    margin-top: 2em;
+    margin-bottom: 0px;
+  }
+
+  #nav-cuenta{
+    margin-top: 0em
+  }
+
+
+ }
+
+ @media (min-width: 769px) { 
+
+  #nav-cuenta{
+    margin-top: 2em
+  }
+
+}
+

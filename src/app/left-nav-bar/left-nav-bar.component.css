@@ -1,5 +1,29 @@
+.sidenav {
+  width: 200px;
+
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar{
+  background-color: transparent !important;
+  
+}
 .hidden {
   display: none;
+}
+
+.buttons, a{
+  color: white;
+  text-decoration: none;
 }
 
 mat-nav-list {
@@ -17,14 +41,31 @@ mat-nav-list li {
 }
 
 .title {
+  width: 15vh;
+  height: 8vh;
+  filter: drop-shadow(3px 3px 0.05rem rgb(186, 34, 206));
   font-weight: 500;
-  margin-left: 25%;
+  margin-left: 10%;
   padding-top: 5%;
   cursor: pointer;
 }
 
-@media (min-width: 1050px) {
-  .mat-sidenav-content {
-    display: none;
+img{
+  width: 9%;
+  margin-left: 3%
+}
+
+.mat-sidenav-content {
+  display: none;
+} 
+
+@media only screen and (max-width: 1040px) {
+  .responsive_logo{
+    width: 25%;
+    filter: drop-shadow(3px 3px 0.05rem rgb(186, 34, 206));
+
+  }
+  .mat-toolbar{
+    background-color: #00b3a6 !important;
   }
 }

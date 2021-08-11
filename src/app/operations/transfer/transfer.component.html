@@ -1,81 +1,64 @@
-<body>
-<div>
+<div id="contenedor" class="container-xl">
   <app-stepper #stepper>
     <!-- Paso 1 -->
     <cdk-step [stepControl]="formgroup">
       <form [formGroup]="formgroup">
-        <div
-          class="card p-3 shadow-sm col-10"
-          [@opacidad]="stepper.selectedIndex === 0 ? 'visible' : 'hide'"
-        >
+        <div class="card p-3 shadow-sm" [@opacidad]="stepper.selectedIndex === 0 ? 'visible' : 'hide'">
           <div class="card-body">
             <h3>Tranferencias</h3>
             <hr />
-            <fieldset class="mb-4">
+            <fieldset>
               <legend class="fw-light">DATOS DE DÉBITO</legend>
               <div class="row">
-                <div class="col-6">
-                  <label for="debit" class="form-label">Cuenta débito</label>
-                  <select class="form-select" id="debit" placeholder="CBU / CVU" formControlName="débito">
-                    <option [ngValue]="origen" *ngFor="let origen of origenes">                      
-                    {{ origen.tipo }} {{ origen.moneda.simbolo }} {{ origen.id | mask: "0000000-0 000-0" }}
-                    </option>
-                  </select>
+                  <div class="col-xl-6 col-md-6 col-sm-6 mb-3">
+                    <label for="debit" class="form-label">Cuenta débito</label>
+                    <select class="form-select" id="debit" placeholder="CBU / CVU" formControlName="débito">
+                      <option [ngValue]="origen" *ngFor="let origen of origenes">                      
+                      {{ origen.tipo }} {{ origen.moneda.simbolo }} {{ origen.id | mask: "0000000-0 000-0" }}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="mb-3" style="width: 200px;">
+                    <label for="monto" class="form-label">Monto</label>
+                    <input
+                      type="text"
+                      id="monto"
+                      required
+                      prefix="{{ origen?.moneda?.simbolo }} "
+                      mask="separator,00"
+                      thousandSeparator="."
+                      placeholder="{{ origen?.moneda?.simbolo }}"
+                      class="form-control form-control fs-3 py-1"
+                      formControlName="monto"
+                    />
+                  </div>
                 </div>
-                <div class="col-4">
-                  <label for="monto" class="form-label">Monto</label>
-                  <input
-                    type="text"
-                    id="monto"
-                    required
-                    prefix="{{ origen?.moneda?.simbolo }} "
-                    mask="separator,00"
-                    thousandSeparator="."
-                    placeholder="{{ origen?.moneda?.simbolo }}"
-                    class="form-control form-control fs-3 py-1"
-                    formControlName="monto"
-                  />
-                </div>
-              </div>
             </fieldset>
-
-            <fieldset class="mb-3">
+            <fieldset>
               <legend class="fw-light">DATOS DE CRÉDITO</legend>
-              <div class="row mb-3">
-                <div class="col-6">
-                  <label for="credit" class="form-label"
-                    >Cuenta crédito</label
-                  >
+              <div class="row">
+                <div class="col-xl-6 col-md-6 col-sm-6 mb-3">
+                  <label for="credit" class="form-label">Cuenta crédito</label>
                   <input
                     class="form-control"
                     id="credit"
                     placeholder="CBU / CVU"
                     mask="9999999999999999999999"
-                    formControlName="cbu"
-                  />
+                    formControlName="cbu"/>
                 </div>
-                <div class="col" formGroupName="info">
+                <div class="col mb-3" formGroupName="info">
                   <label for="concept" class="form-label">Concepto</label>
                   <select class="form-select" formControlName="concepto">
-                    <option
-                      [ngValue]="concepto"
-                      *ngFor="let concepto of conceptos"
-                    >
-                      {{ concepto.nombre }}
-                    </option>
+                    <option [ngValue]="concepto" *ngFor="let concepto of conceptos">{{ concepto.nombre }}</option>
                   </select>
                 </div>
               </div>
               <div class="row" formGroupName="info">
-                <div class="col">
+                <div class="col-xl-6 col-md-6 col-sm-6 mb-3">
                   <label for="desc" class="form-label">Descripción</label>
-                  <textarea
-                    class="form-control"
-                    id="desc"
-                    formControlName="desc"
-                  ></textarea>
+                  <textarea class="form-control" id="desc" formControlName="desc"></textarea>
                 </div>
-                <div class="col">
+                <div class="col mb-3">
                   <label for="email" class="form-label"
                     >E-mail de notificación</label
                   >
@@ -90,7 +73,7 @@
             </fieldset>
             <button
               type="button"
-              class="btn btn-primary float-end my-3 p-2 rounded-pill w-25"
+              class="btn btn-primary float-end my-3 p-2 rounded-pill"
               (click)="Validar()"
               [disabled]="formgroup.invalid"
             >
@@ -111,7 +94,7 @@
         </div>
       </ng-template>
 
-      <div class="alert alert-secondary col-3 my-3" role="alert">
+      <div class="alert alert-secondary col-7 col-sm-6 my-3" role="alert">
         <b>Prueba CBU</b>
         <li>4567891011100000987654</li>
         <li>9876543033308000123456</li>
@@ -126,51 +109,48 @@
     </cdk-step>
     <!-- Paso 2 -->
     <cdk-step>
-      <div
-        class="card p-3 shadow-sm col-7"
-        [@opacidad]="stepper.selectedIndex === 1 ? 'visible' : 'hide'"
-      >
+      <div class="card p-3 shadow-sm" [@opacidad]="stepper.selectedIndex === 1 ? 'visible' : 'hide'">
         <div class="card-body">
           <h3>Confirmar transferencia</h3>
           <hr />
-          <fieldset class="mb-4" style="font-size: large">
+          <fieldset class="mb-4 f1" style="font-size: large">
             <legend class="fw-bold">TRANSFIRIENDO A</legend>
             <div class="row">
-              <label class="col-2 col-form-label">Titular</label>
+              <label class="col-form-label">Titular</label>
               <div class="col col-form-label">
                 <span>{{ transfer.destino?.titular }}</span>
               </div>
             </div>
             <div class="row">
-              <label class="col-2 col-form-label">Monto</label>
+              <label class="col-form-label">Monto</label>
               <div class="col col-form-label">
                 <span>{{ transfer.monto | currency: origen?.moneda?.simbolo + " " }}</span>
               </div>
             </div>
           </fieldset>
 
-          <fieldset class="mb-4" style="font-size: large">
+          <fieldset class="mb-4 f2" style="font-size: large">
             <legend class="fw-bold">DETALLE DE TRANSFERENCIA</legend>
             <div class="row">
-              <label class="col-3 col-form-label">Entidad</label>
+              <label class="col-form-label">Entidad</label>
               <div class="col col-form-label">
                 <span>{{ transfer.destino?.entidad.nombre }}</span>
               </div>
             </div>
             <div class="row">
-              <label class="col-3 col-form-label">CBU</label>
+              <label class="col-form-label">CBU</label>
               <div class="col col-form-label">
                 <span>{{ transfer.destino?.CBU }}</span>
               </div>
             </div>
             <div class="row">
-              <label class="col-3 col-form-label">Concepto</label>
+              <label class="col-form-label">Concepto</label>
               <div class="col col-form-label">
                 <span>{{ transfer.info.concepto.nombre }}</span>
               </div>
             </div>
             <div class="row">
-              <label class="col-3 col-form-label">Email</label>
+              <label class="col-form-label">Email</label>
               <div class="col col-form-label">
                 <span>{{ transfer.info.email }}</span>
               </div>
@@ -196,10 +176,7 @@
     </cdk-step>
     <!-- Paso 3 -->
     <cdk-step>
-      <div
-        class="card p-3 shadow-sm col-8"
-        [@opacidad]="stepper.selectedIndex === 2 ? 'visible' : 'hide'"
-      >
+      <div class="card p-3 shadow-sm" [@opacidad]="stepper.selectedIndex === 2 ? 'visible' : 'hide'">
         <div class="card-body text-center">
           <div class="row">
             <img src="/assets/transfer.jpg" class="rounded" />
@@ -219,4 +196,3 @@
     </cdk-step>
   </app-stepper>
 </div>
-</body>

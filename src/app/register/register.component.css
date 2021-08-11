@@ -3,12 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #c4c4c4 50%, #f3f3f3 50%);
   font-family: "Roboto";
   font-size: 16px;
   position: relative;
 }
 
+.center {
+  background: linear-gradient(180deg, #00b3a6 50%, #f3f3f3 50%);
+}
 .register-form {
   width: 480px;
   margin: 20px;
@@ -65,10 +67,10 @@ button {
 }
 
 @media screen and (max-width: 1040px) {
-  .register-form{
+  .register-form {
     border-radius: 0;
   }
-  button{
+  button {
     width: 200px;
   }
 }

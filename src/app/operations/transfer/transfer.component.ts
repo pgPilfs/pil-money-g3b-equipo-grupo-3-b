@@ -57,7 +57,7 @@ export class TransferComponent implements OnInit {
         email: [''],
       }),
     });
-
+    
     this.conceptos.push({ id: 1, nombre: 'Alquileres' });
     this.conceptos.push({ id: 2, nombre: 'Couta' });
     this.conceptos.push({ id: 3, nombre: 'Expensas' });
