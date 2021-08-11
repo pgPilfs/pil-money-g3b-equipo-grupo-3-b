@@ -55,6 +55,10 @@ img{
   margin-left: 3%
 }
 
+.mat-sidenav-content {
+  display: none;
+} 
+
 @media only screen and (max-width: 1040px) {
   .responsive_logo{
     width: 25%;
