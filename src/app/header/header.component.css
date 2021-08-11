@@ -3,6 +3,13 @@
 
 }
 
+.Logo {
+  width: 8%;
+  height: 80%;
+  margin-right: 10%;
+  filter: drop-shadow(2px 2px 0.05rem rgb(186, 34, 206));
+}
+
 .sidenav .mat-toolbar {
   background: inherit;
 }
